@@ -18,12 +18,8 @@ public class Item implements Serializable {
     private String name;
     private String description;
     private String imageLocation;
-    @Column(columnDefinition = "DECIMAL(20,5)", nullable = false)
+    @Column(scale = 5, precision = 20, nullable = false)
     private BigDecimal price;
-    @Column(nullable = false)
-    private Boolean isLaunched;
-    @Column(nullable = false)
-    private Boolean isReady;
 
     @ManyToMany
     @JoinTable(name = "ITEM_TYPES",
@@ -76,22 +72,6 @@ public class Item implements Serializable {
 
     public void setPrice(BigDecimal price) {
         this.price = price;
-    }
-
-    public Boolean getLaunched() {
-        return isLaunched;
-    }
-
-    public void setLaunched(Boolean launched) {
-        isLaunched = launched;
-    }
-
-    public Boolean getReady() {
-        return isReady;
-    }
-
-    public void setReady(Boolean ready) {
-        isReady = ready;
     }
 
     public Set<Type> getTypes() {
