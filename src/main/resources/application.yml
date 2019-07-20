@@ -1,1 +1,17 @@
-
+server:
+  port: 9000
+debug: true
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:8889/demo_ampos_restaurant?useSSL=true&useUnicode=true&characterEncoding=UTF8&useJDBCCompliantTimezoneShift=true&serverTimeZone=UTC
+    username: root
+    password: root
+  jpa:
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL57Dialect
+        format_sql: true
