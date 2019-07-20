@@ -2,15 +2,21 @@ package com.example.demoamposrestaurant.persistent.domain;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 
 @Entity
 @Table(name = "ORDER_DETAIL")
 public class OrderDetail implements Serializable {
 
-    private static final long serialVersionUID = 5224555272335798975L;
+    private static final long serialVersionUID = -2324260438769076899L;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Integer quantity;
+    @Column(columnDefinition = "TIMESTAMP NULL DEFAULT NULL")
+    private Date orderedTime;
+    @Column(columnDefinition = "TIMESTAMP NULL DEFAULT NULL")
+    private Date checkedTime;
 
     @ManyToOne
     @JoinColumn(name = "order_id", foreignKey = @ForeignKey(name = "fk_order_order_detail"))
@@ -34,6 +40,22 @@ public class OrderDetail implements Serializable {
 
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
+    }
+
+    public Date getOrderedTime() {
+        return orderedTime;
+    }
+
+    public void setOrderedTime(Date orderedTime) {
+        this.orderedTime = orderedTime;
+    }
+
+    public Date getCheckedTime() {
+        return checkedTime;
+    }
+
+    public void setCheckedTime(Date checkedTime) {
+        this.checkedTime = checkedTime;
     }
 
     public BillOrder getBillOrder() {
