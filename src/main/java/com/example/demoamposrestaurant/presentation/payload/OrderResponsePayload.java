@@ -14,7 +14,7 @@ public class OrderResponsePayload implements Serializable {
     @ApiModelProperty(value = "Total amount of the order")
     private BigDecimal totalAmount;
     @ApiModelProperty(value = "List of ordered items")
-    private Set<OrderDetailPayload> details;
+    private Set<OrderDetailResponsePayload> details;
 
     public Long getId() {
         return id;
@@ -32,11 +32,11 @@ public class OrderResponsePayload implements Serializable {
         this.totalAmount = totalAmount;
     }
 
-    public Set<OrderDetailPayload> getDetails() {
+    public Set<OrderDetailResponsePayload> getDetails() {
         return details;
     }
 
-    public void setDetails(Set<OrderDetailPayload> details) {
+    public void setDetails(Set<OrderDetailResponsePayload> details) {
         this.details = details;
     }
 }
