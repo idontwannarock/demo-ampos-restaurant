@@ -7,9 +7,11 @@ import java.util.Set;
 
 public class MenuRequestPayload implements Serializable {
 
-    private static final long serialVersionUID = -2830999082696129737L;
+    private static final long serialVersionUID = -530162216776145870L;
     @ApiModelProperty(value = "Menu name")
     private String name;
+    @ApiModelProperty(value = "Menu's availability")
+    private Boolean isAvailable;
     @ApiModelProperty(value = "Menu items")
     private Set<Long> itemIds;
 
@@ -19,6 +21,14 @@ public class MenuRequestPayload implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Boolean getIsAvailable() {
+        return isAvailable;
+    }
+
+    public void setIsAvailable(Boolean isAvailable) {
+        this.isAvailable = isAvailable;
     }
 
     public Set<Long> getItemIds() {

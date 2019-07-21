@@ -4,13 +4,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 import java.io.Serializable;
 
-public class OrderDetailPayload implements Serializable {
+public class OrderDetailResponsePayload implements Serializable {
 
-    private static final long serialVersionUID = 5433598483787424194L;
+    private static final long serialVersionUID = 864638097153539539L;
     @ApiModelProperty(value = "Order detail id")
     private Long id;
-    @ApiModelProperty(value = "Ordered item id")
-    private Long itemId;
+    @ApiModelProperty(value = "Ordered item")
+    private ItemResponsePayload item;
     @ApiModelProperty(value = "Ordered quantity")
     private Integer quantity;
 
@@ -22,12 +22,12 @@ public class OrderDetailPayload implements Serializable {
         this.id = id;
     }
 
-    public Long getItemId() {
-        return itemId;
+    public ItemResponsePayload getItem() {
+        return item;
     }
 
-    public void setItemId(Long itemId) {
-        this.itemId = itemId;
+    public void setItem(ItemResponsePayload item) {
+        this.item = item;
     }
 
     public Integer getQuantity() {

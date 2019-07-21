@@ -10,7 +10,7 @@ import java.util.Set;
 @Table(name = "ITEM")
 public class Item implements Serializable {
 
-    private static final long serialVersionUID = 3792418105787985087L;
+    private static final long serialVersionUID = -792562110473143576L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -21,7 +21,7 @@ public class Item implements Serializable {
     @Column(scale = 5, precision = 20, nullable = false)
     private BigDecimal price;
 
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "ITEM_TYPES",
             joinColumns = @JoinColumn(name = "item_id", referencedColumnName = "id", foreignKey = @ForeignKey(name = "fk_item_types_item")),
             inverseJoinColumns = @JoinColumn(name = "type_id", referencedColumnName = "id", foreignKey = @ForeignKey(name = "fk_item_types_type"))
