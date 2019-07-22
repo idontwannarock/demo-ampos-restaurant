@@ -18,6 +18,6 @@ $ docker-compose up
 
 ## Documentation
 
-After application and mysql are up and running, you can find Swagger documentation in below link for more details of apis and models.
+After application and mysql are up and running, you can find live Swagger tester and documentation in below link for more details of apis and models.
 
 [Swagger Documentation](http://localhost:9000/swagger-ui.html)
