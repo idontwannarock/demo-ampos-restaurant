@@ -13,7 +13,7 @@ Have Maven installed the project, and then docker-compose up.
 
 ```bash
 $ git clone https://github.com/idontwannarock/demo-ampos-restaurant.git
-$ mvn clean installed -DskipTests
+$ mvn clean install -DskipTests
 $ docker-compose up
 ```
 
