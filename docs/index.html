@@ -1,0 +1,3541 @@
+ 							
+
+
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+				
+		<!-- a bootstrap css is mandatory -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">	
+		
+		<style type="text/css">
+
+		
+			.summary-table tr td:nth-child(1){
+    			width:5%;
+			}
+			.summary-table tr td:nth-child(2){
+    			width:5%;
+			}		
+			.summary-table tr td:nth-child(3){
+    			width:30%;
+			}					
+			.info-table tr td:nth-child(1){
+    			width:15%;
+			}						
+
+			.operation-intro-table tr td:nth-child(1){
+    			width:20%;
+			}			
+			
+			.param-table tr td:nth-child(1){
+				width:10%;
+			}
+			.param-table tr td:nth-child(2){				
+				width:10%;
+			}
+			.param-table tr td:nth-child(3){
+				width:60%;
+			}
+			.param-table tr td:nth-child(4){
+				width:10%;
+			}													
+						
+			.response-table tr td:nth-child(1){
+				width:10%;
+			}			
+			
+			.response-table tr td:nth-child(2){				
+				width:20%;
+			}		
+			
+			.model-rows-table tr td:nth-child(1){
+				width:40%;
+			} 
+			.model-rows-table tr td:nth-child(2){
+				width:5%;
+			}		
+			.model-rows-table tr td:nth-child(3){
+				width:40%;
+			}		
+			.model-rows-table tr td:nth-child(4){
+				width:5%;
+			}		
+			.model-rows-table tr td:nth-child(5){
+				width:5%;
+			}																	
+			.model-rows-table tr td:nth-child(6){
+				width:5%;
+			}					
+ 						
+			
+		</style>
+		
+			
+		<title>
+			Employee API
+		</title>
+	
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		</head>
+		<body>
+		
+		<div class="container">
+			<h1>Employee API</h1>		
+			
+			
+				<h2>Information</h2>		
+				<div>						
+					<table class="table table-bordered info-table">
+						<tbody>
+								<tr>											
+									<td>Base URL</td> 
+									<td>
+									</td>
+								</tr>							
+						
+						
+								<tr>											
+									<td>Version</td> <td>1.0.0</td>
+								</tr>
+								
+								
+								
+									<tr>											
+										<td>Description</td> <td>  <p>API for AMPOS restaurant order related actions.</p>   </td>
+									</tr>
+								
+						</tbody>
+					</table>	
+				</div>						
+
+ 
+			
+			<h2>Table of Contents</h2>		
+			
+				<h3>basic-error-controller</h3>
+				<h4>Basic Error Controller</h4>
+				
+				<div>						
+					<table class="table table-bordered table-condensed summary-table">
+						<tbody>
+								<tr>
+									<th>Index</th>
+									<th>Method</th>								
+									<th>Path</th>		
+									<th>Summary</th>																												
+								</tr>						
+															 												
+									<tr>
+										<td><a href="#basic-error-controller::::/error::::OPTIONS">1</a></td>								
+										<td><a href="#basic-error-controller::::/error::::OPTIONS">OPTIONS</a></td>								
+										<td><a href="#basic-error-controller::::/error::::OPTIONS">/error</a></td>
+										<td>
+												error
+										</td>											 					
+									</tr>								
+									<tr>
+										<td><a href="#basic-error-controller::::/error::::POST">2</a></td>								
+										<td><a href="#basic-error-controller::::/error::::POST">POST</a></td>								
+										<td><a href="#basic-error-controller::::/error::::POST">/error</a></td>
+										<td>
+												error
+										</td>											 					
+									</tr>								
+									<tr>
+										<td><a href="#basic-error-controller::::/error::::DELETE">3</a></td>								
+										<td><a href="#basic-error-controller::::/error::::DELETE">DELETE</a></td>								
+										<td><a href="#basic-error-controller::::/error::::DELETE">/error</a></td>
+										<td>
+												error
+										</td>											 					
+									</tr>								
+									<tr>
+										<td><a href="#basic-error-controller::::/error::::PATCH">4</a></td>								
+										<td><a href="#basic-error-controller::::/error::::PATCH">PATCH</a></td>								
+										<td><a href="#basic-error-controller::::/error::::PATCH">/error</a></td>
+										<td>
+												error
+										</td>											 					
+									</tr>								
+									<tr>
+										<td><a href="#basic-error-controller::::/error::::PUT">5</a></td>								
+										<td><a href="#basic-error-controller::::/error::::PUT">PUT</a></td>								
+										<td><a href="#basic-error-controller::::/error::::PUT">/error</a></td>
+										<td>
+												error
+										</td>											 					
+									</tr>								
+									<tr>
+										<td><a href="#basic-error-controller::::/error::::GET">6</a></td>								
+										<td><a href="#basic-error-controller::::/error::::GET">GET</a></td>								
+										<td><a href="#basic-error-controller::::/error::::GET">/error</a></td>
+										<td>
+												error
+										</td>											 					
+									</tr>								
+									<tr>
+										<td><a href="#basic-error-controller::::/error::::HEAD">7</a></td>								
+										<td><a href="#basic-error-controller::::/error::::HEAD">HEAD</a></td>								
+										<td><a href="#basic-error-controller::::/error::::HEAD">/error</a></td>
+										<td>
+												error
+										</td>											 					
+									</tr>								
+						</tbody>
+					</table>	
+				</div>	
+				
+			
+				<h3>item-controller</h3>
+				<h4>Item Controller</h4>
+				
+				<div>						
+					<table class="table table-bordered table-condensed summary-table">
+						<tbody>
+								<tr>
+									<th>Index</th>
+									<th>Method</th>								
+									<th>Path</th>		
+									<th>Summary</th>																												
+								</tr>						
+															 												
+									<tr>
+										<td><a href="#item-controller::::/api/item/::::POST">1</a></td>								
+										<td><a href="#item-controller::::/api/item/::::POST">POST</a></td>								
+										<td><a href="#item-controller::::/api/item/::::POST">/api/item/</a></td>
+										<td>
+												Create a new item.
+										</td>											 					
+									</tr>								
+									<tr>
+										<td><a href="#item-controller::::/api/item/::::GET">2</a></td>								
+										<td><a href="#item-controller::::/api/item/::::GET">GET</a></td>								
+										<td><a href="#item-controller::::/api/item/::::GET">/api/item/</a></td>
+										<td>
+												Search items with pagination.
+										</td>											 					
+									</tr>								
+									<tr>
+										<td><a href="#item-controller::::/api/item/types::::GET">3</a></td>								
+										<td><a href="#item-controller::::/api/item/types::::GET">GET</a></td>								
+										<td><a href="#item-controller::::/api/item/types::::GET">/api/item/types</a></td>
+										<td>
+												Get all item types.
+										</td>											 					
+									</tr>								
+									<tr>
+										<td><a href="#item-controller::::/api/item/{id}::::PUT">4</a></td>								
+										<td><a href="#item-controller::::/api/item/{id}::::PUT">PUT</a></td>								
+										<td><a href="#item-controller::::/api/item/{id}::::PUT">/api/item/{id}</a></td>
+										<td>
+												Modify an existing item.
+										</td>											 					
+									</tr>								
+									<tr>
+										<td><a href="#item-controller::::/api/item/{id}::::GET">5</a></td>								
+										<td><a href="#item-controller::::/api/item/{id}::::GET">GET</a></td>								
+										<td><a href="#item-controller::::/api/item/{id}::::GET">/api/item/{id}</a></td>
+										<td>
+												Find item by id.
+										</td>											 					
+									</tr>								
+						</tbody>
+					</table>	
+				</div>	
+				
+			
+				<h3>menu-controller</h3>
+				<h4>Menu Controller</h4>
+				
+				<div>						
+					<table class="table table-bordered table-condensed summary-table">
+						<tbody>
+								<tr>
+									<th>Index</th>
+									<th>Method</th>								
+									<th>Path</th>		
+									<th>Summary</th>																												
+								</tr>						
+															 												
+									<tr>
+										<td><a href="#menu-controller::::/api/menu/::::POST">1</a></td>								
+										<td><a href="#menu-controller::::/api/menu/::::POST">POST</a></td>								
+										<td><a href="#menu-controller::::/api/menu/::::POST">/api/menu/</a></td>
+										<td>
+												Create a new menu.
+										</td>											 					
+									</tr>								
+									<tr>
+										<td><a href="#menu-controller::::/api/menu/::::GET">2</a></td>								
+										<td><a href="#menu-controller::::/api/menu/::::GET">GET</a></td>								
+										<td><a href="#menu-controller::::/api/menu/::::GET">/api/menu/</a></td>
+										<td>
+												Search available menus.
+										</td>											 					
+									</tr>								
+									<tr>
+										<td><a href="#menu-controller::::/api/menu/{id}::::DELETE">3</a></td>								
+										<td><a href="#menu-controller::::/api/menu/{id}::::DELETE">DELETE</a></td>								
+										<td><a href="#menu-controller::::/api/menu/{id}::::DELETE">/api/menu/{id}</a></td>
+										<td>
+												Disable a menu.
+										</td>											 					
+									</tr>								
+									<tr>
+										<td><a href="#menu-controller::::/api/menu/{id}::::PUT">4</a></td>								
+										<td><a href="#menu-controller::::/api/menu/{id}::::PUT">PUT</a></td>								
+										<td><a href="#menu-controller::::/api/menu/{id}::::PUT">/api/menu/{id}</a></td>
+										<td>
+												Modify an existing menu.
+										</td>											 					
+									</tr>								
+									<tr>
+										<td><a href="#menu-controller::::/api/menu/{id}::::GET">5</a></td>								
+										<td><a href="#menu-controller::::/api/menu/{id}::::GET">GET</a></td>								
+										<td><a href="#menu-controller::::/api/menu/{id}::::GET">/api/menu/{id}</a></td>
+										<td>
+												Find menu by id.
+										</td>											 					
+									</tr>								
+						</tbody>
+					</table>	
+				</div>	
+				
+			
+				<h3>order-controller</h3>
+				<h4>Order Controller</h4>
+				
+				<div>						
+					<table class="table table-bordered table-condensed summary-table">
+						<tbody>
+								<tr>
+									<th>Index</th>
+									<th>Method</th>								
+									<th>Path</th>		
+									<th>Summary</th>																												
+								</tr>						
+															 												
+									<tr>
+										<td><a href="#order-controller::::/api/order/::::POST">1</a></td>								
+										<td><a href="#order-controller::::/api/order/::::POST">POST</a></td>								
+										<td><a href="#order-controller::::/api/order/::::POST">/api/order/</a></td>
+										<td>
+												Place an order.
+										</td>											 					
+									</tr>								
+									<tr>
+										<td><a href="#order-controller::::/api/order/{id}::::PUT">2</a></td>								
+										<td><a href="#order-controller::::/api/order/{id}::::PUT">PUT</a></td>								
+										<td><a href="#order-controller::::/api/order/{id}::::PUT">/api/order/{id}</a></td>
+										<td>
+												Check the bill.
+										</td>											 					
+									</tr>								
+									<tr>
+										<td><a href="#order-controller::::/api/order/{id}::::GET">3</a></td>								
+										<td><a href="#order-controller::::/api/order/{id}::::GET">GET</a></td>								
+										<td><a href="#order-controller::::/api/order/{id}::::GET">/api/order/{id}</a></td>
+										<td>
+												Find order by id.
+										</td>											 					
+									</tr>								
+									<tr>
+										<td><a href="#order-controller::::/api/order/{orderId}/detail::::POST">4</a></td>								
+										<td><a href="#order-controller::::/api/order/{orderId}/detail::::POST">POST</a></td>								
+										<td><a href="#order-controller::::/api/order/{orderId}/detail::::POST">/api/order/{orderId}/detail</a></td>
+										<td>
+												Add another item to the order.
+										</td>											 					
+									</tr>								
+									<tr>
+										<td><a href="#order-controller::::/api/order/{orderId}/detail/{detailId}::::DELETE">5</a></td>								
+										<td><a href="#order-controller::::/api/order/{orderId}/detail/{detailId}::::DELETE">DELETE</a></td>								
+										<td><a href="#order-controller::::/api/order/{orderId}/detail/{detailId}::::DELETE">/api/order/{orderId}/detail/{detailId}</a></td>
+										<td>
+												Cancel an item in the order.
+										</td>											 					
+									</tr>								
+						</tbody>
+					</table>	
+				</div>	
+				
+			
+	
+			
+			
+			
+			<!-- One tag after another-->			
+			
+				<h2>basic-error-controller</h2>
+					
+						<!-- every operation -->
+						<h3><a name="basic-error-controller::::/error::::OPTIONS">OPTIONS /error</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>error</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td>application/json</td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>*/*</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+						No Parameters
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">object</div>																
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>204</td>
+												<td>No Content</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+						<!-- every operation -->
+						<h3><a name="basic-error-controller::::/error::::POST">POST /error</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>error</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td>application/json</td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>*/*</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+						No Parameters
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">object</div>																
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>201</td>
+												<td>Created</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>404</td>
+												<td>Not Found</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+						<!-- every operation -->
+						<h3><a name="basic-error-controller::::/error::::DELETE">DELETE /error</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>error</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>*/*</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+						No Parameters
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">object</div>																
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>204</td>
+												<td>No Content</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+						<!-- every operation -->
+						<h3><a name="basic-error-controller::::/error::::PATCH">PATCH /error</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>error</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td>application/json</td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>*/*</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+						No Parameters
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">object</div>																
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>204</td>
+												<td>No Content</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+						<!-- every operation -->
+						<h3><a name="basic-error-controller::::/error::::PUT">PUT /error</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>error</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td>application/json</td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>*/*</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+						No Parameters
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">object</div>																
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>201</td>
+												<td>Created</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>404</td>
+												<td>Not Found</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+						<!-- every operation -->
+						<h3><a name="basic-error-controller::::/error::::GET">GET /error</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>error</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>*/*</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+						No Parameters
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">object</div>																
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>404</td>
+												<td>Not Found</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+						<!-- every operation -->
+						<h3><a name="basic-error-controller::::/error::::HEAD">HEAD /error</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>error</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td>application/json</td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>*/*</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+						No Parameters
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">object</div>																
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>204</td>
+												<td>No Content</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+					
+											
+				<h2>item-controller</h2>
+					
+						<!-- every operation -->
+						<h3><a name="item-controller::::/api/item/::::POST">POST /api/item/</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>Create a new item.</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td>Must provide name and price.</td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td>application/json;charset=UTF-8</td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>application/json;charset=UTF-8</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+			 																					
+						<div>				
+							<table class="table table-bordered param-table">
+								<tbody>
+										<tr>
+											<th>Name</th>										
+											<th>Parameter Type</th>	
+											<th>Data Type</th>																					
+											<th>Required</th>		
+											<th>Description</th>																														
+										</tr>	
+											<tr>																	
+												<td>item</td>
+												<td>body</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">ItemRequestPayload</div>														
+				<table class="table table-condensed table-bordered model-rows-table">																								
+					<tr>
+						<th>Property</th>
+						<th>Type</th>
+						<th>Description</th>
+						<th>Format</th>
+						<th>Required</th>
+						<th>ReadOnly</th>
+					</tr>
+						<tr>
+							<td>description</td>
+							<td>string</td>
+							<td>Item description</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>imageLocation</td>
+							<td>string</td>
+							<td>Item image location</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>name</td>
+							<td>string</td>
+							<td>Item name</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>price</td>
+							<td>number</td>
+							<td>Item price per unit</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>typeIds[]</td>
+							<td>array[int64]</td>
+							<td>Item's type ids</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+				</table>									
+													</div>
+												</td>											
+												<td>N</td>
+												<td>Content of a new item.</td>
+											</tr>								 					
+
+									</tr>
+																				
+								</tbody>						
+													
+							</table>		
+						</div>	
+										
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">object</div>																
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>201</td>
+												<td>Created</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>404</td>
+												<td>Not Found</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+						<!-- every operation -->
+						<h3><a name="item-controller::::/api/item/::::GET">GET /api/item/</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>Search items with pagination.</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td>Page parameter starts from 0.</td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>application/json;charset=UTF-8</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+			 																					
+						<div>				
+							<table class="table table-bordered param-table">
+								<tbody>
+										<tr>
+											<th>Name</th>										
+											<th>Parameter Type</th>	
+											<th>Data Type</th>																					
+											<th>Required</th>		
+											<th>Description</th>																														
+										</tr>	
+											<tr>																	
+												<td>keyword</td>
+												<td>query</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">string</div>														
+													</div>
+												</td>											
+												<td>N</td>
+												<td>Optional keyword to match against item name, description, and additional details.</td>
+											</tr>								 					
+
+									</tr>
+											<tr>																	
+												<td>page</td>
+												<td>query</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">int32</div>														
+													</div>
+												</td>											
+												<td>N</td>
+												<td>Page number of the results you want to fetch. Start from 0.</td>
+											</tr>								 					
+
+									</tr>
+											<tr>																	
+												<td>size</td>
+												<td>query</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">int32</div>														
+													</div>
+												</td>											
+												<td>N</td>
+												<td>Total number of the results on a specific page.</td>
+											</tr>								 					
+
+									</tr>
+																				
+								</tbody>						
+													
+							</table>		
+						</div>	
+										
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">PageablePayload«ItemResponsePayload»</div>																
+				<table class="table table-condensed table-bordered model-rows-table">																								
+					<tr>
+						<th>Property</th>
+						<th>Type</th>
+						<th>Description</th>
+						<th>Format</th>
+						<th>Required</th>
+						<th>ReadOnly</th>
+					</tr>
+						<tr>
+							<td>data[]</td>
+							<td>array[ItemResponsePayload]</td>
+							<td>One slice of data.</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>data[].description</td>
+							<td>string</td>
+							<td>Item description</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>data[].id</td>
+							<td>int64</td>
+							<td>Item id</td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>data[].imageLocation</td>
+							<td>string</td>
+							<td>Item image location</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>data[].name</td>
+							<td>string</td>
+							<td>Item name</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>data[].price</td>
+							<td>number</td>
+							<td>Item price per unit</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>data[].types[]</td>
+							<td>array[TypePayload]</td>
+							<td>Item's additional details</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>data[].types[].id</td>
+							<td>int64</td>
+							<td>item type id</td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>data[].types[].name</td>
+							<td>string</td>
+							<td>item type name</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>totalElements</td>
+							<td>int64</td>
+							<td>Total elements.</td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>totalPages</td>
+							<td>int32</td>
+							<td>Total pages.</td>
+							<td>int32</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+				</table>									
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>404</td>
+												<td>Not Found</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+						<!-- every operation -->
+						<h3><a name="item-controller::::/api/item/types::::GET">GET /api/item/types</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>Get all item types.</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>application/json;charset=UTF-8</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+						No Parameters
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">array[TypePayload]</div>																
+				<table class="table table-condensed table-bordered model-rows-table">																								
+					<tr>
+						<th>Property</th>
+						<th>Type</th>
+						<th>Description</th>
+						<th>Format</th>
+						<th>Required</th>
+						<th>ReadOnly</th>
+					</tr>
+						<tr>
+							<td>[].id</td>
+							<td>int64</td>
+							<td>item type id</td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>[].name</td>
+							<td>string</td>
+							<td>item type name</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+				</table>									
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>404</td>
+												<td>Not Found</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+						<!-- every operation -->
+						<h3><a name="item-controller::::/api/item/{id}::::PUT">PUT /api/item/{id}</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>Modify an existing item.</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td>Must provide id of an existing item.
+Properties that are not provided will be modified as empty value.</td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td>application/json;charset=UTF-8</td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>application/json;charset=UTF-8</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+			 																					
+						<div>				
+							<table class="table table-bordered param-table">
+								<tbody>
+										<tr>
+											<th>Name</th>										
+											<th>Parameter Type</th>	
+											<th>Data Type</th>																					
+											<th>Required</th>		
+											<th>Description</th>																														
+										</tr>	
+											<tr>																	
+												<td>id</td>
+												<td>path</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">int64</div>														
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>Item's id to be found.</td>
+											</tr>								 					
+
+									</tr>
+											<tr>																	
+												<td>item</td>
+												<td>body</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">ItemRequestPayload</div>														
+				<table class="table table-condensed table-bordered model-rows-table">																								
+					<tr>
+						<th>Property</th>
+						<th>Type</th>
+						<th>Description</th>
+						<th>Format</th>
+						<th>Required</th>
+						<th>ReadOnly</th>
+					</tr>
+						<tr>
+							<td>description</td>
+							<td>string</td>
+							<td>Item description</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>imageLocation</td>
+							<td>string</td>
+							<td>Item image location</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>name</td>
+							<td>string</td>
+							<td>Item name</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>price</td>
+							<td>number</td>
+							<td>Item price per unit</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>typeIds[]</td>
+							<td>array[int64]</td>
+							<td>Item's type ids</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+				</table>									
+													</div>
+												</td>											
+												<td>N</td>
+												<td>Item to be modified with complete content.</td>
+											</tr>								 					
+
+									</tr>
+																				
+								</tbody>						
+													
+							</table>		
+						</div>	
+										
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">object</div>																
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>201</td>
+												<td>Created</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>404</td>
+												<td>Not Found</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+						<!-- every operation -->
+						<h3><a name="item-controller::::/api/item/{id}::::GET">GET /api/item/{id}</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>Find item by id.</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>application/json;charset=UTF-8</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+			 																					
+						<div>				
+							<table class="table table-bordered param-table">
+								<tbody>
+										<tr>
+											<th>Name</th>										
+											<th>Parameter Type</th>	
+											<th>Data Type</th>																					
+											<th>Required</th>		
+											<th>Description</th>																														
+										</tr>	
+											<tr>																	
+												<td>id</td>
+												<td>path</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">int64</div>														
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>Item's id to be found.</td>
+											</tr>								 					
+
+									</tr>
+																				
+								</tbody>						
+													
+							</table>		
+						</div>	
+										
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">ItemResponsePayload</div>																
+				<table class="table table-condensed table-bordered model-rows-table">																								
+					<tr>
+						<th>Property</th>
+						<th>Type</th>
+						<th>Description</th>
+						<th>Format</th>
+						<th>Required</th>
+						<th>ReadOnly</th>
+					</tr>
+						<tr>
+							<td>description</td>
+							<td>string</td>
+							<td>Item description</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>id</td>
+							<td>int64</td>
+							<td>Item id</td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>imageLocation</td>
+							<td>string</td>
+							<td>Item image location</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>name</td>
+							<td>string</td>
+							<td>Item name</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>price</td>
+							<td>number</td>
+							<td>Item price per unit</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>types[]</td>
+							<td>array[TypePayload]</td>
+							<td>Item's additional details</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>types[].id</td>
+							<td>int64</td>
+							<td>item type id</td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>types[].name</td>
+							<td>string</td>
+							<td>item type name</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+				</table>									
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>404</td>
+												<td>Not Found</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+					
+											
+				<h2>menu-controller</h2>
+					
+						<!-- every operation -->
+						<h3><a name="menu-controller::::/api/menu/::::POST">POST /api/menu/</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>Create a new menu.</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td>application/json;charset=UTF-8</td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>application/json;charset=UTF-8</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+			 																					
+						<div>				
+							<table class="table table-bordered param-table">
+								<tbody>
+										<tr>
+											<th>Name</th>										
+											<th>Parameter Type</th>	
+											<th>Data Type</th>																					
+											<th>Required</th>		
+											<th>Description</th>																														
+										</tr>	
+											<tr>																	
+												<td>menu</td>
+												<td>body</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">MenuRequestPayload</div>														
+				<table class="table table-condensed table-bordered model-rows-table">																								
+					<tr>
+						<th>Property</th>
+						<th>Type</th>
+						<th>Description</th>
+						<th>Format</th>
+						<th>Required</th>
+						<th>ReadOnly</th>
+					</tr>
+						<tr>
+							<td>isAvailable</td>
+							<td>boolean</td>
+							<td>Menu's availability</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>itemIds[]</td>
+							<td>array[int64]</td>
+							<td>Menu items</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>name</td>
+							<td>string</td>
+							<td>Menu name</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+				</table>									
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>menu</td>
+											</tr>								 					
+
+									</tr>
+																				
+								</tbody>						
+													
+							</table>		
+						</div>	
+										
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">object</div>																
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>201</td>
+												<td>Created</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>404</td>
+												<td>Not Found</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+						<!-- every operation -->
+						<h3><a name="menu-controller::::/api/menu/::::GET">GET /api/menu/</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>Search available menus.</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td>Provided keyword will match against menu name.
+Otherwise return all available menus.</td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>application/json;charset=UTF-8</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+			 																					
+						<div>				
+							<table class="table table-bordered param-table">
+								<tbody>
+										<tr>
+											<th>Name</th>										
+											<th>Parameter Type</th>	
+											<th>Data Type</th>																					
+											<th>Required</th>		
+											<th>Description</th>																														
+										</tr>	
+											<tr>																	
+												<td>keyword</td>
+												<td>query</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">string</div>														
+													</div>
+												</td>											
+												<td>N</td>
+												<td>keyword</td>
+											</tr>								 					
+
+									</tr>
+																				
+								</tbody>						
+													
+							</table>		
+						</div>	
+										
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">array[MenuResponsePayload]</div>																
+				<table class="table table-condensed table-bordered model-rows-table">																								
+					<tr>
+						<th>Property</th>
+						<th>Type</th>
+						<th>Description</th>
+						<th>Format</th>
+						<th>Required</th>
+						<th>ReadOnly</th>
+					</tr>
+						<tr>
+							<td>[].id</td>
+							<td>int64</td>
+							<td>Menu id</td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>[].items[]</td>
+							<td>array[ItemResponsePayload]</td>
+							<td>Menu items</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>[].items[].description</td>
+							<td>string</td>
+							<td>Item description</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>[].items[].id</td>
+							<td>int64</td>
+							<td>Item id</td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>[].items[].imageLocation</td>
+							<td>string</td>
+							<td>Item image location</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>[].items[].name</td>
+							<td>string</td>
+							<td>Item name</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>[].items[].price</td>
+							<td>number</td>
+							<td>Item price per unit</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>[].items[].types[]</td>
+							<td>array[TypePayload]</td>
+							<td>Item's additional details</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>[].items[].types[].id</td>
+							<td>int64</td>
+							<td>item type id</td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>[].items[].types[].name</td>
+							<td>string</td>
+							<td>item type name</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>[].name</td>
+							<td>string</td>
+							<td>Menu name</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+				</table>									
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>404</td>
+												<td>Not Found</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+						<!-- every operation -->
+						<h3><a name="menu-controller::::/api/menu/{id}::::DELETE">DELETE /api/menu/{id}</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>Disable a menu.</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>application/json;charset=UTF-8</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+			 																					
+						<div>				
+							<table class="table table-bordered param-table">
+								<tbody>
+										<tr>
+											<th>Name</th>										
+											<th>Parameter Type</th>	
+											<th>Data Type</th>																					
+											<th>Required</th>		
+											<th>Description</th>																														
+										</tr>	
+											<tr>																	
+												<td>id</td>
+												<td>path</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">int64</div>														
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>id</td>
+											</tr>								 					
+
+									</tr>
+																				
+								</tbody>						
+													
+							</table>		
+						</div>	
+										
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">object</div>																
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>204</td>
+												<td>No Content</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+						<!-- every operation -->
+						<h3><a name="menu-controller::::/api/menu/{id}::::PUT">PUT /api/menu/{id}</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>Modify an existing menu.</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td>Must provide id of an existing menu.
+Properties that are not provided will be modified as empty value.</td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td>application/json;charset=UTF-8</td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>application/json;charset=UTF-8</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+			 																					
+						<div>				
+							<table class="table table-bordered param-table">
+								<tbody>
+										<tr>
+											<th>Name</th>										
+											<th>Parameter Type</th>	
+											<th>Data Type</th>																					
+											<th>Required</th>		
+											<th>Description</th>																														
+										</tr>	
+											<tr>																	
+												<td>id</td>
+												<td>path</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">int64</div>														
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>id</td>
+											</tr>								 					
+
+									</tr>
+											<tr>																	
+												<td>menu</td>
+												<td>body</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">MenuRequestPayload</div>														
+				<table class="table table-condensed table-bordered model-rows-table">																								
+					<tr>
+						<th>Property</th>
+						<th>Type</th>
+						<th>Description</th>
+						<th>Format</th>
+						<th>Required</th>
+						<th>ReadOnly</th>
+					</tr>
+						<tr>
+							<td>isAvailable</td>
+							<td>boolean</td>
+							<td>Menu's availability</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>itemIds[]</td>
+							<td>array[int64]</td>
+							<td>Menu items</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>name</td>
+							<td>string</td>
+							<td>Menu name</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+				</table>									
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>menu</td>
+											</tr>								 					
+
+									</tr>
+																				
+								</tbody>						
+													
+							</table>		
+						</div>	
+										
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">object</div>																
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>201</td>
+												<td>Created</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>404</td>
+												<td>Not Found</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+						<!-- every operation -->
+						<h3><a name="menu-controller::::/api/menu/{id}::::GET">GET /api/menu/{id}</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>Find menu by id.</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>application/json;charset=UTF-8</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+			 																					
+						<div>				
+							<table class="table table-bordered param-table">
+								<tbody>
+										<tr>
+											<th>Name</th>										
+											<th>Parameter Type</th>	
+											<th>Data Type</th>																					
+											<th>Required</th>		
+											<th>Description</th>																														
+										</tr>	
+											<tr>																	
+												<td>id</td>
+												<td>path</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">int64</div>														
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>id</td>
+											</tr>								 					
+
+									</tr>
+																				
+								</tbody>						
+													
+							</table>		
+						</div>	
+										
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">MenuResponsePayload</div>																
+				<table class="table table-condensed table-bordered model-rows-table">																								
+					<tr>
+						<th>Property</th>
+						<th>Type</th>
+						<th>Description</th>
+						<th>Format</th>
+						<th>Required</th>
+						<th>ReadOnly</th>
+					</tr>
+						<tr>
+							<td>id</td>
+							<td>int64</td>
+							<td>Menu id</td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>items[]</td>
+							<td>array[ItemResponsePayload]</td>
+							<td>Menu items</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>items[].description</td>
+							<td>string</td>
+							<td>Item description</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>items[].id</td>
+							<td>int64</td>
+							<td>Item id</td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>items[].imageLocation</td>
+							<td>string</td>
+							<td>Item image location</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>items[].name</td>
+							<td>string</td>
+							<td>Item name</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>items[].price</td>
+							<td>number</td>
+							<td>Item price per unit</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>items[].types[]</td>
+							<td>array[TypePayload]</td>
+							<td>Item's additional details</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>items[].types[].id</td>
+							<td>int64</td>
+							<td>item type id</td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>items[].types[].name</td>
+							<td>string</td>
+							<td>item type name</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>name</td>
+							<td>string</td>
+							<td>Menu name</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+				</table>									
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>404</td>
+												<td>Not Found</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+					
+											
+				<h2>order-controller</h2>
+					
+						<!-- every operation -->
+						<h3><a name="order-controller::::/api/order/::::POST">POST /api/order/</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>Place an order.</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td>application/json;charset=UTF-8</td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>application/json;charset=UTF-8</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+			 																					
+						<div>				
+							<table class="table table-bordered param-table">
+								<tbody>
+										<tr>
+											<th>Name</th>										
+											<th>Parameter Type</th>	
+											<th>Data Type</th>																					
+											<th>Required</th>		
+											<th>Description</th>																														
+										</tr>	
+											<tr>																	
+												<td>order</td>
+												<td>body</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">array[OrderDetailRequestPayload]</div>														
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>order</td>
+											</tr>								 					
+
+									</tr>
+																				
+								</tbody>						
+													
+							</table>		
+						</div>	
+										
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">object</div>																
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>201</td>
+												<td>Created</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>404</td>
+												<td>Not Found</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+						<!-- every operation -->
+						<h3><a name="order-controller::::/api/order/{id}::::PUT">PUT /api/order/{id}</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>Check the bill.</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td>application/json</td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>application/json;charset=UTF-8</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+			 																					
+						<div>				
+							<table class="table table-bordered param-table">
+								<tbody>
+										<tr>
+											<th>Name</th>										
+											<th>Parameter Type</th>	
+											<th>Data Type</th>																					
+											<th>Required</th>		
+											<th>Description</th>																														
+										</tr>	
+											<tr>																	
+												<td>id</td>
+												<td>path</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">int64</div>														
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>id</td>
+											</tr>								 					
+
+									</tr>
+																				
+								</tbody>						
+													
+							</table>		
+						</div>	
+										
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">object</div>																
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>201</td>
+												<td>Created</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>404</td>
+												<td>Not Found</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+						<!-- every operation -->
+						<h3><a name="order-controller::::/api/order/{id}::::GET">GET /api/order/{id}</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>Find order by id.</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>application/json;charset=UTF-8</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+			 																					
+						<div>				
+							<table class="table table-bordered param-table">
+								<tbody>
+										<tr>
+											<th>Name</th>										
+											<th>Parameter Type</th>	
+											<th>Data Type</th>																					
+											<th>Required</th>		
+											<th>Description</th>																														
+										</tr>	
+											<tr>																	
+												<td>id</td>
+												<td>path</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">int64</div>														
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>id</td>
+											</tr>								 					
+
+									</tr>
+																				
+								</tbody>						
+													
+							</table>		
+						</div>	
+										
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">OrderResponsePayload</div>																
+				<table class="table table-condensed table-bordered model-rows-table">																								
+					<tr>
+						<th>Property</th>
+						<th>Type</th>
+						<th>Description</th>
+						<th>Format</th>
+						<th>Required</th>
+						<th>ReadOnly</th>
+					</tr>
+						<tr>
+							<td>details[]</td>
+							<td>array[OrderDetailResponsePayload]</td>
+							<td>List of ordered items</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>details[].id</td>
+							<td>int64</td>
+							<td>Order detail id</td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>details[].item</td>
+							<td>ItemResponsePayload</td>
+							<td>Ordered item</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>details[].item.description</td>
+							<td>string</td>
+							<td>Item description</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>details[].item.id</td>
+							<td>int64</td>
+							<td>Item id</td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>details[].item.imageLocation</td>
+							<td>string</td>
+							<td>Item image location</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>details[].item.name</td>
+							<td>string</td>
+							<td>Item name</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>details[].item.price</td>
+							<td>number</td>
+							<td>Item price per unit</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>details[].item.types[]</td>
+							<td>array[TypePayload]</td>
+							<td>Item's additional details</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>details[].item.types[].id</td>
+							<td>int64</td>
+							<td>item type id</td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>details[].item.types[].name</td>
+							<td>string</td>
+							<td>item type name</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>details[].quantity</td>
+							<td>int32</td>
+							<td>Ordered quantity</td>
+							<td>int32</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>id</td>
+							<td>int64</td>
+							<td>Order id</td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>totalAmount</td>
+							<td>number</td>
+							<td>Total amount of the order</td>
+							<td></td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+				</table>									
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>404</td>
+												<td>Not Found</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+						<!-- every operation -->
+						<h3><a name="order-controller::::/api/order/{orderId}/detail::::POST">POST /api/order/{orderId}/detail</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>Add another item to the order.</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td>application/json;charset=UTF-8</td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>application/json;charset=UTF-8</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+			 																					
+						<div>				
+							<table class="table table-bordered param-table">
+								<tbody>
+										<tr>
+											<th>Name</th>										
+											<th>Parameter Type</th>	
+											<th>Data Type</th>																					
+											<th>Required</th>		
+											<th>Description</th>																														
+										</tr>	
+											<tr>																	
+												<td>detail</td>
+												<td>body</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">OrderDetailRequestPayload</div>														
+				<table class="table table-condensed table-bordered model-rows-table">																								
+					<tr>
+						<th>Property</th>
+						<th>Type</th>
+						<th>Description</th>
+						<th>Format</th>
+						<th>Required</th>
+						<th>ReadOnly</th>
+					</tr>
+						<tr>
+							<td>itemId</td>
+							<td>int64</td>
+							<td>Ordered item id</td>
+							<td>int64</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+						<tr>
+							<td>quantity</td>
+							<td>int32</td>
+							<td>Ordered quantity</td>
+							<td>int32</td>
+							<td>N</td>
+							<td>
+							</td>
+						</tr>										
+				</table>									
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>detail</td>
+											</tr>								 					
+
+									</tr>
+											<tr>																	
+												<td>orderId</td>
+												<td>path</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">int64</div>														
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>orderId</td>
+											</tr>								 					
+
+									</tr>
+																				
+								</tbody>						
+													
+							</table>		
+						</div>	
+										
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">object</div>																
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>201</td>
+												<td>Created</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>404</td>
+												<td>Not Found</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+						<!-- every operation -->
+						<h3><a name="order-controller::::/api/order/{orderId}/detail/{detailId}::::DELETE">DELETE /api/order/{orderId}/detail/{detailId}</a></h3>
+						
+						<div>						
+							<table class="table table-bordered table-condensed operation-intro-table">
+								<tbody>
+										
+										<tr>
+											<td>Summary</td> <td>Cancel an item in the order.</td>
+										</tr>
+										<tr>											
+											<td>Notes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Consumes</td> <td></td>
+										</tr>
+										<tr>											
+											<td>Produces</td> <td>application/json;charset=UTF-8</td>																																						 				
+										</tr>								
+												
+			
+									
+								</tbody>
+							</table>	
+						</div>	
+									
+					<h4>Parameters</h4>	
+								
+			 																					
+						<div>				
+							<table class="table table-bordered param-table">
+								<tbody>
+										<tr>
+											<th>Name</th>										
+											<th>Parameter Type</th>	
+											<th>Data Type</th>																					
+											<th>Required</th>		
+											<th>Description</th>																														
+										</tr>	
+											<tr>																	
+												<td>detailId</td>
+												<td>path</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">int64</div>														
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>detailId</td>
+											</tr>								 					
+
+									</tr>
+											<tr>																	
+												<td>orderId</td>
+												<td>path</td>
+												<td>
+													<div class="panel panel-default">														
+														<div class="panel-heading">int64</div>														
+													</div>
+												</td>											
+												<td>Y</td>
+												<td>orderId</td>
+											</tr>								 					
+
+									</tr>
+																				
+								</tbody>						
+													
+							</table>		
+						</div>	
+										
+						
+
+						<h4>Responses</h4>		
+						<div>				
+							<table class="table table-bordered response-table">
+								<tbody>
+										<tr>
+											<th>HTTP Status Code</th>										
+											<th>Reason</th>	
+											<th>Response Type</th>																																																													
+										</tr>	
+			 								
+											<tr>																	
+												<td>200</td>
+												<td>OK</td>
+												<td>
+															<div class="panel panel-default">														
+																<div class="panel-heading">object</div>																
+															</div>														 
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>204</td>
+												<td>No Content</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>401</td>
+												<td>Unauthorized</td>
+												<td>
+												</td>											
+											</tr>								 					
+			 								
+											<tr>																	
+												<td>403</td>
+												<td>Forbidden</td>
+												<td>
+												</td>											
+											</tr>								 					
+									</tr>										
+																				
+								</tbody>						
+													
+							</table>	
+						</div>
+		
+
+
+															
+					
+					
+											
+		</div>			
+		</body>
+	</html>
+
+ 
+
+
