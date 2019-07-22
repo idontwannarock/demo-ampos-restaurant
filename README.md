@@ -2,6 +2,7 @@
 
 ## Required Environment
 
+- Git
 - JDK 1.8+
 - Maven 3.5.2+
 - Docker installed with Docker Engine 1.13.0+ 
