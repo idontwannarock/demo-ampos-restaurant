@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  docker-mysql:
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=demo_ampos_restaurant
+    volumes:
+      - /data/mysql
+  docker-app-container:
+    image: docker-app
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    depends_on:
+      - docker-mysql
+    ports:
+      - 9000:9000
+    volumes:
+      - /data/docker-app
