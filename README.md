@@ -18,6 +18,8 @@ $ docker-compose up
 
 ## Documentation
 
-After application and mysql are up and running, you can find live Swagger tester and documentation in below link for more details of apis and models.
+[Static Documentation](https://idontwannarock.github.io/demo-ampos-restaurant/)
 
-[Swagger Documentation](http://localhost:9000/swagger-ui.html)
+After docker compose are up and running, you can find live Swagger tester and documentation in below link.
+
+[Live Swagger Documentation](http://localhost:9000/swagger-ui.html)
