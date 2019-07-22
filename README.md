@@ -3,24 +3,17 @@
 ## Required Environment
 
 - JDK 1.8+
-- Maven 3+
-- Docker installed 
+- Maven 3.5.2+
+- Docker installed with Docker Engine 1.13.0+ 
 
 ## Quick Start
 
-Run MySQL container.
-
-```bash
-$ docker run -d -p 8889:3306 --name docker-mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=demo_ampos_restaurant mysql:latest
-```
-
-Have Maven installed the project, and then build project image and run.
+Have Maven installed the project, and then docker-compose up.
 
 ```bash
 $ git clone https://github.com/idontwannarock/demo-ampos-restaurant.git
 $ mvn clean installed -DskipTests
-$ docker build -f Dockerfile -t docker-app .
-$ docker run -t --name docker-app-container --link docker-mysql:mysql -p 9000:9000 docker-app
+$ docker-compose up
 ```
 
 ## Documentation
