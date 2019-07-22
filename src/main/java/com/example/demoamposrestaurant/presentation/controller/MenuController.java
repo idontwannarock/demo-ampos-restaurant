@@ -5,6 +5,7 @@ import com.example.demoamposrestaurant.presentation.payload.MenuRequestPayload;
 import com.example.demoamposrestaurant.presentation.payload.MenuResponsePayload;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -26,6 +27,7 @@ public class MenuController {
             consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<?> createMenu(
+            @ApiParam("Content of a new menu.")
             @RequestBody MenuRequestPayload menu) {
         return ResponseEntity.created(URI.create("api/menu/" + menuService.createNewMenu(menu))).build();
     }
@@ -35,6 +37,7 @@ public class MenuController {
     @GetMapping(value = "/",
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<List<MenuResponsePayload>> searchMenus(
+            @ApiParam("Optional keyword to match against menu name.")
             @RequestParam(name = "keyword", required = false) String keyword) {
         return ResponseEntity.ok(menuService.searchMenuWithKeyword(keyword));
     }
@@ -43,6 +46,7 @@ public class MenuController {
     @GetMapping(value = "/{id}",
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<MenuResponsePayload> findMenuById(
+            @ApiParam(value = "Menu's id to be found.", required = true)
             @PathVariable("id") Long id) {
         return ResponseEntity.ok(menuService.findMenuById(id));
     }
@@ -53,7 +57,9 @@ public class MenuController {
             consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<?> modifyMenu(
+            @ApiParam(value = "Menu's id to be modify.", required = true)
             @PathVariable("id") Long id,
+            @ApiParam("Menu to be modified with complete content.")
             @RequestBody MenuRequestPayload menu) {
         menuService.updateMenu(id, menu);
         return ResponseEntity.ok().build();
@@ -63,6 +69,7 @@ public class MenuController {
     @DeleteMapping(value = "/{id}",
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<?> disableMenu(
+            @ApiParam(value = "Menu's id to be disabled.", required = true)
             @PathVariable("id") Long id) {
         menuService.disableMenu(id);
         return ResponseEntity.ok().build();
