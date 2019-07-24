@@ -2,20 +2,34 @@ version: '3'
 
 services:
   docker-mysql:
+    container_name: docker-mysql
     image: mysql:latest
+    restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=demo_ampos_restaurant
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
     volumes:
       - /data/mysql
-  docker-app-container:
+    ports:
+      - 3306:3306
+  docker-app:
+    container_name: docker-app
     image: docker-app
+    restart: always
     build:
       context: ./
       dockerfile: Dockerfile
+    environment:
+      - DATABASE_HOST=docker-mysql
+      - DATABASE_PORT=3306
+      - DATABASE_NAME=demo_ampos_restaurant
+      - DATABASE_USER=user
+      - DATABASE_PASSWORD=password
     depends_on:
       - docker-mysql
     ports:
       - 9000:9000
     volumes:
-      - /data/docker-app
+      - /data/spring-boot-app
