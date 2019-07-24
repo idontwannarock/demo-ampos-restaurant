@@ -13,7 +13,7 @@ Have Maven installed the project, and then docker-compose up.
 
 ```bash
 $ git clone https://github.com/idontwannarock/demo-ampos-restaurant.git
-$ mvn clean install -DskipTests
+$ mvn clean install -DskipTests -Pdocker
 $ docker-compose up
 ```
 
@@ -28,3 +28,11 @@ After docker compose are up and running, you can find live Swagger tester and do
 If you are using Docker Toolbox, you will find live Swagger tester and documentation in below link instead.
 
 [Docker Toolbox's Live Swagger Documentation](http://192.168.99.100:9000/swagger-ui.html)
+
+### Offline Document Generation
+
+Run below script will generate Swagger static HTML doc in docs folder.
+
+```bash
+$ mvn clean test -Pdocument -Dfile.encoding=UTF-8
+```

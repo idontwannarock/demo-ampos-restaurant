@@ -35,9 +35,9 @@ spring:
       settings:
         trace: false
         web-allow-others: false
-swagger:
-  output:
-    dir: '@swagger.output.dir@'
+output:
+  dir:
+    html: '@output.dir.html@'
 ---
 spring:
   profiles: docker

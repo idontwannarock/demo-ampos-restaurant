@@ -1,47 +1,60 @@
 package com.example.demoamposrestaurant;
 
+import io.github.swagger2markup.Swagger2MarkupConverter;
+import org.asciidoctor.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.MediaType;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
-import java.io.BufferedWriter;
-import java.net.URL;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.io.File;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+@ActiveProfiles(profiles = "document")
 @RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK, classes = DemoAmposRestaurantApplication.class)
+@SpringBootTest
 @AutoConfigureMockMvc
 public class Swagger2MarkupTest {
 
     @Autowired
     private MockMvc mockMvc;
 
-    @Value("${swagger.output.dir}")
-    private String outputDir;
+    @Value("${output.dir.html}")
+    private String htmlOutputDir;
 
     @Test
-    public void generateStaticDoc() throws Exception {
+    public void convert() throws Exception {
         MvcResult result = mockMvc
-                .perform(get("/v2/api-docs?group=employee-api").accept(MediaType.APPLICATION_JSON))
+                .perform(get("/v2/api-docs?group=employee-api"))
                 .andExpect(status().isOk())
                 .andReturn();
 
-        Files.createDirectories(Paths.get(outputDir));
         String swaggerJson = result.getResponse().getContentAsString();
-        try (BufferedWriter writer = Files.newBufferedWriter(Paths.get(outputDir, "swagger.json"), StandardCharsets.UTF_8)) {
-            writer.write(swaggerJson);
-        }
+        String adoc = Swagger2MarkupConverter.from(swaggerJson).build().toString();
+
+        Asciidoctor asciidoctor = Asciidoctor.Factory.create();
+        OptionsBuilder optionsBuilder = OptionsBuilder.options()
+                .mkDirs(true)
+                .toFile(new File( htmlOutputDir + "/index.html"))
+                .backend("html5")
+                .docType("book")
+                .headerFooter(true)
+                .safe(SafeMode.UNSAFE)
+                .attributes(AttributesBuilder.attributes()
+                        .copyCss(true)
+                        .linkCss(false)
+                        .sectNumLevels(3)
+                        .setAnchors(true)
+                        .hardbreaks(true)
+                        .tableOfContents(Placement.LEFT));
+        asciidoctor.convert(adoc, optionsBuilder);
     }
 }
