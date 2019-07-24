@@ -24,3 +24,7 @@ $ docker-compose up
 After docker compose are up and running, you can find live Swagger tester and documentation in below link.
 
 [Live Swagger Documentation](http://localhost:9000/swagger-ui.html)
+
+If you are using Docker Toolbox, you will find live Swagger tester and documentation in below link instead.
+
+[Docker Toolbox's Live Swagger Documentation](http://192.168.99.100:9000/swagger-ui.html)
