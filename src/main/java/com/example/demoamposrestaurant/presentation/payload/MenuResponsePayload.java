@@ -1,18 +1,20 @@
 package com.example.demoamposrestaurant.presentation.payload;
 
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.io.Serializable;
 import java.util.Set;
 
+@ApiModel(description = "Class representing a menu in response.")
 public class MenuResponsePayload implements Serializable {
 
     private static final long serialVersionUID = -7971617173655531907L;
-    @ApiModelProperty(value = "Menu id")
+    @ApiModelProperty(value = "Identifier of the menu", position = 0)
     private Long id;
-    @ApiModelProperty(value = "Menu name")
+    @ApiModelProperty(value = "Menu name", position = 1)
     private String name;
-    @ApiModelProperty(value = "Menu items")
+    @ApiModelProperty(value = "Items in the menu", position = 2)
     private Set<ItemResponsePayload> items;
 
     public Long getId() {

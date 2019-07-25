@@ -28,7 +28,7 @@ public class SwaggerConfig {
     public ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("Staff Only Order Management API")
-                .description("APIs for AMPOS restaurant staff only order management.")
+                .description("Endpoints for staff of AMPOS restaurant to manage orders.")
                 .version("1.0.0")
                 .contact(new Contact("Howard Wang", "", "idontwannarock@gmail.com"))
                 .build();

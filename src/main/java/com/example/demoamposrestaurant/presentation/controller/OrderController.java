@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.net.URI;
 import java.util.List;
 
-@Api("Order Controller")
+@Api(tags = "Endpoints for Managing Order")
 @RequestMapping("api/order")
 @RestController
 public class OrderController {
@@ -22,57 +22,57 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
 
-    @ApiOperation(value = "Place an order.")
-    @PostMapping(value = "/",
+    @ApiOperation(value = "Places an Order")
+    @PostMapping(
             consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity placeOrder(
-            @ApiParam("List of items to be ordered.")
-            @RequestBody List<OrderDetailRequestPayload> order) {
-        return ResponseEntity.created(URI.create("api/order/" + orderService.placeOrder(order))).build();
+            @ApiParam(value = "List of items to be ordered.", required = true)
+            @RequestBody List<OrderDetailRequestPayload> items) {
+        return ResponseEntity.created(URI.create("api/order/" + orderService.placeOrder(items))).build();
     }
 
-    @ApiOperation(value = "Find order by id.")
+    @ApiOperation(value = "Returns a Specific Order by Their Id")
     @GetMapping(value = "/{id}",
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<OrderResponsePayload> findOrderById(
-            @ApiParam(value = "Order's id to be found.", required = true)
-            @PathVariable("id") Long id) {
+            @ApiParam(value = "Id of the order to be obtained.", required = true, example = "1")
+            @PathVariable(name = "id") Long id) {
         return ResponseEntity.ok(orderService.findOrderById(id));
     }
 
-    @ApiOperation(value = "Check the bill.")
+    @ApiOperation(value = "Checks a Specific Bill by Their Order Id")
     @PutMapping(value = "/{id}",
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity check(
-            @ApiParam(value = "Order's id to be checked.", required = true)
-            @PathVariable("id") Long id) {
+            @ApiParam(value = "Id of the order to be checked.", required = true, example = "1")
+            @PathVariable(name = "id") Long id) {
         orderService.checkTheBill(id);
         return ResponseEntity.ok().build();
     }
 
-    @ApiOperation(value = "Add another item to the order.")
+    @ApiOperation(value = "Adds Another Item to a Specific Order")
     @PostMapping(value = "/{orderId}/detail",
             consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity orderAnotherItem(
-            @ApiParam(value = "Order's id to be added another item.", required = true)
-            @PathVariable("orderId") Long orderId,
-            @ApiParam("Item to be added.")
+            @ApiParam(value = "Id of the order to be added another item.", required = true, example = "1")
+            @PathVariable(name = "orderId") Long orderId,
+            @ApiParam(value = "Item and quantity to be added.", required = true)
             @RequestBody OrderDetailRequestPayload detail) {
         long detailId = orderService.orderAdditionalItem(orderId, detail.getItemId(), detail.getQuantity());
         return ResponseEntity.created(URI.create("api/order/" + orderId + "/detail/" + detailId)).build();
     }
 
-    @ApiOperation(value = "Cancel an item in the order.")
+    @ApiOperation(value = "Cancels an Item in a Specific Order")
     @DeleteMapping(value = "/{orderId}/detail/{detailId}",
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public ResponseEntity cancelAnItem(
-            @ApiParam(value = "Order's id, which contains the item to be canceled.", required = true)
-            @PathVariable("orderId") Long orderId,
-            @ApiParam(value = "Order details's id to be canceled.", required = true)
-            @PathVariable("detailId") Long detailId) {
-        orderService.cancelOneItemInOrder(orderId, detailId);
+    public ResponseEntity cancelAnDetail(
+            @ApiParam(value = "Id of the order, which contains the detail to be canceled.", required = true, example = "1")
+            @PathVariable(name = "orderId") Long orderId,
+            @ApiParam(value = "Id of the order detail to be canceled.", required = true, example = "3")
+            @PathVariable(name = "detailId") Long detailId) {
+        orderService.cancelAnDetailInOrder(orderId, detailId);
         return ResponseEntity.ok().build();
     }
 }

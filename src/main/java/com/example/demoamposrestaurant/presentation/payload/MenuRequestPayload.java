@@ -1,18 +1,20 @@
 package com.example.demoamposrestaurant.presentation.payload;
 
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.io.Serializable;
 import java.util.Set;
 
+@ApiModel(description = "Class representing a menu in request.")
 public class MenuRequestPayload implements Serializable {
 
     private static final long serialVersionUID = -530162216776145870L;
-    @ApiModelProperty(value = "Menu name")
+    @ApiModelProperty(value = "Menu name", example = "Today's special", position = 0)
     private String name;
-    @ApiModelProperty(value = "Menu's availability")
+    @ApiModelProperty(value = "Availability of the menu", example = "true", position = 1)
     private Boolean isAvailable;
-    @ApiModelProperty(value = "Menu items")
+    @ApiModelProperty(value = "Menu items", example = "[1, 3, 5]", position = 2)
     private Set<Long> itemIds;
 
     public String getName() {

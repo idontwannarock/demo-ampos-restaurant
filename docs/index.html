@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
-<title>Employee API</title>
+<title>Staff Only Order Management API</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -438,34 +438,35 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="book toc2 toc-left">
 <div id="header">
-<h1>Employee API</h1>
+<h1>Staff Only Order Management API</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_overview">Overview</a>
 <ul class="sectlevel2">
 <li><a href="#_version_information">Version information</a></li>
+<li><a href="#_contact_information">Contact information</a></li>
 <li><a href="#_uri_scheme">URI scheme</a></li>
 <li><a href="#_tags">Tags</a></li>
 </ul>
 </li>
 <li><a href="#_paths">Paths</a>
 <ul class="sectlevel2">
-<li><a href="#_createitemusingpost">Create a new item.</a></li>
-<li><a href="#_searchitemsusingget">Search items with pagination.</a></li>
-<li><a href="#_getalltypesusingget">Get all item types.</a></li>
-<li><a href="#_finditembyidusingget">Find item by id.</a></li>
-<li><a href="#_modifyitemusingput">Modify an existing item.</a></li>
-<li><a href="#_createmenuusingpost">Create a new menu.</a></li>
-<li><a href="#_searchmenususingget">Search available menus.</a></li>
-<li><a href="#_findmenubyidusingget">Find menu by id.</a></li>
-<li><a href="#_modifymenuusingput">Modify an existing menu.</a></li>
+<li><a href="#_createitemusingpost">Creates a New Item</a></li>
+<li><a href="#_searchitemsusingget">Returns a Page of Items Matching Against Optional Keyword</a></li>
+<li><a href="#_getalltypesusingget">Returns List of All Item Types</a></li>
+<li><a href="#_finditembyidusingget">Returns a Specific Item by Their Id</a></li>
+<li><a href="#_modifyitemusingput">Modifies an Existing Item</a></li>
+<li><a href="#_createmenuusingpost">Creates a New Menu</a></li>
+<li><a href="#_searchmenususingget">Returns List of Available Menus Matching Against Optional Keyword</a></li>
+<li><a href="#_findmenubyidusingget">Returns a Specific Menu by Their Id</a></li>
+<li><a href="#_modifymenuusingput">Modifies an Existing Menu</a></li>
 <li><a href="#_disablemenuusingdelete">Disable a menu.</a></li>
-<li><a href="#_placeorderusingpost">Place an order.</a></li>
-<li><a href="#_findorderbyidusingget">Find order by id.</a></li>
-<li><a href="#_checkusingput">Check the bill.</a></li>
-<li><a href="#_orderanotheritemusingpost">Add another item to the order.</a></li>
-<li><a href="#_cancelanitemusingdelete">Cancel an item in the order.</a></li>
+<li><a href="#_placeorderusingpost">Places an Order</a></li>
+<li><a href="#_findorderbyidusingget">Returns a Specific Order by Their Id</a></li>
+<li><a href="#_checkusingput">Checks a Specific Bill by Their Order Id</a></li>
+<li><a href="#_orderanotheritemusingpost">Adds Another Item to a Specific Order</a></li>
+<li><a href="#_cancelandetailusingdelete">Cancels an Item in a Specific Order</a></li>
 </ul>
 </li>
 <li><a href="#_definitions">Definitions</a>
@@ -478,6 +479,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_orderdetailresponsepayload">OrderDetailResponsePayload</a></li>
 <li><a href="#_orderresponsepayload">OrderResponsePayload</a></li>
 <li><a href="#_689c17ef93ec055be25e6b97970dd536">PageablePayload«ItemResponsePayload»</a></li>
+<li><a href="#_responseentity">ResponseEntity</a></li>
 <li><a href="#_typepayload">TypePayload</a></li>
 </ul>
 </li>
@@ -489,12 +491,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>API for AMPOS restaurant order related actions.</p>
+<p>Endpoints for staff of AMPOS restaurant to manage orders.</p>
 </div>
 <div class="sect2">
 <h3 id="_version_information"><a class="anchor" href="#_version_information"></a>Version information</h3>
 <div class="paragraph">
 <p><em>Version</em> : 1.0.0</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_contact_information"><a class="anchor" href="#_contact_information"></a>Contact information</h3>
+<div class="paragraph">
+<p><em>Contact</em> : Howard Wang<br>
+<em>Contact Email</em> : <a href="mailto:idontwannarock@gmail.com">idontwannarock@gmail.com</a></p>
 </div>
 </div>
 <div class="sect2">
@@ -509,13 +518,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>item-controller : Item Controller</p>
+<p>Endpoints for Managing Item or Type : Item Controller</p>
 </li>
 <li>
-<p>menu-controller : Menu Controller</p>
+<p>Endpoints for Managing Menu : Menu Controller</p>
 </li>
 <li>
-<p>order-controller : Order Controller</p>
+<p>Endpoints for Managing Order : Order Controller</p>
 </li>
 </ul>
 </div>
@@ -526,16 +535,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_paths"><a class="anchor" href="#_paths"></a>Paths</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_createitemusingpost"><a class="anchor" href="#_createitemusingpost"></a>Create a new item.</h3>
+<h3 id="_createitemusingpost"><a class="anchor" href="#_createitemusingpost"></a>Creates a New Item</h3>
 <div class="literalblock">
 <div class="content">
-<pre>POST /api/item/</pre>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_description"><a class="anchor" href="#_description"></a>Description</h4>
-<div class="paragraph">
-<p>Must provide name and price.</p>
+<pre>POST /api/item</pre>
 </div>
 </div>
 <div class="sect3">
@@ -562,10 +565,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p><strong>item</strong><br>
-<em>optional</em></p>
+<em>required</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Content of a new item.</p>
+<p>Item information for a new item to be created.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p><a href="#_itemrequestpayload">ItemRequestPayload</a></p>
@@ -598,7 +601,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>OK</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>object</p>
+<p><a href="#_responseentity">ResponseEntity</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -606,10 +609,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p><strong>201</strong></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Created</p>
+<p>Item created.<br>
+<strong>Headers</strong> : <br>
+<code>location</code> (string)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>No Content</p>
+<p><a href="#_responseentity">ResponseEntity</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -673,23 +678,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>item-controller</p>
+<p>Endpoints for Managing Item or Type</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_searchitemsusingget"><a class="anchor" href="#_searchitemsusingget"></a>Search items with pagination.</h3>
+<h3 id="_searchitemsusingget"><a class="anchor" href="#_searchitemsusingget"></a>Returns a Page of Items Matching Against Optional Keyword</h3>
 <div class="literalblock">
 <div class="content">
-<pre>GET /api/item/</pre>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_description_2"><a class="anchor" href="#_description_2"></a>Description</h4>
-<div class="paragraph">
-<p>Page parameter starts from 0.</p>
+<pre>GET /api/item</pre>
 </div>
 </div>
 <div class="sect3">
@@ -734,10 +733,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p><strong>page</strong><br>
-<em>optional</em></p>
+<em>required</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Page number of the results you want to fetch. Start from 0.</p>
+<p>Page number of the results you want to fetch. Starts from 0.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>integer (int32)</p>
@@ -752,7 +751,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p><strong>size</strong><br>
-<em>optional</em></p>
+<em>required</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>Total number of the results on a specific page.</p>
@@ -845,17 +844,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>item-controller</p>
+<p>Endpoints for Managing Item or Type</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_getalltypesusingget"><a class="anchor" href="#_getalltypesusingget"></a>Get all item types.</h3>
+<h3 id="_getalltypesusingget"><a class="anchor" href="#_getalltypesusingget"></a>Returns List of All Item Types</h3>
 <div class="literalblock">
 <div class="content">
-<pre>GET /api/item/types</pre>
+<pre>GET /api/item/type</pre>
 </div>
 </div>
 <div class="sect3">
@@ -936,14 +935,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>item-controller</p>
+<p>Endpoints for Managing Item or Type</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_finditembyidusingget"><a class="anchor" href="#_finditembyidusingget"></a>Find item by id.</h3>
+<h3 id="_finditembyidusingget"><a class="anchor" href="#_finditembyidusingget"></a>Returns a Specific Item by Their Id</h3>
 <div class="literalblock">
 <div class="content">
 <pre>GET /api/item/{id}</pre>
@@ -976,7 +975,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <em>required</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Item&#8217;s id to be found.</p>
+<p>Id of the item to be obtained.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>integer (int64)</p>
@@ -1063,24 +1062,23 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>item-controller</p>
+<p>Endpoints for Managing Item or Type</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_modifyitemusingput"><a class="anchor" href="#_modifyitemusingput"></a>Modify an existing item.</h3>
+<h3 id="_modifyitemusingput"><a class="anchor" href="#_modifyitemusingput"></a>Modifies an Existing Item</h3>
 <div class="literalblock">
 <div class="content">
 <pre>PUT /api/item/{id}</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_3"><a class="anchor" href="#_description_3"></a>Description</h4>
+<h4 id="_description"><a class="anchor" href="#_description"></a>Description</h4>
 <div class="paragraph">
-<p>Must provide id of an existing item.<br>
-Properties that are not provided will be modified as empty value.</p>
+<p>Properties that are not provided will be modified as empty value.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1110,7 +1108,7 @@ Properties that are not provided will be modified as empty value.</p>
 <em>required</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Item&#8217;s id to be modify.</p>
+<p>Id of the item to be modified.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>integer (int64)</p>
@@ -1122,10 +1120,10 @@ Properties that are not provided will be modified as empty value.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p><strong>item</strong><br>
-<em>optional</em></p>
+<em>required</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Item to be modified with complete content.</p>
+<p>Item information for an existing item to be modified.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p><a href="#_itemrequestpayload">ItemRequestPayload</a></p>
@@ -1158,7 +1156,7 @@ Properties that are not provided will be modified as empty value.</p>
 <p>OK</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>object</p>
+<p><a href="#_responseentity">ResponseEntity</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -1233,17 +1231,17 @@ Properties that are not provided will be modified as empty value.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>item-controller</p>
+<p>Endpoints for Managing Item or Type</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_createmenuusingpost"><a class="anchor" href="#_createmenuusingpost"></a>Create a new menu.</h3>
+<h3 id="_createmenuusingpost"><a class="anchor" href="#_createmenuusingpost"></a>Creates a New Menu</h3>
 <div class="literalblock">
 <div class="content">
-<pre>POST /api/menu/</pre>
+<pre>POST /api/menu</pre>
 </div>
 </div>
 <div class="sect3">
@@ -1270,10 +1268,10 @@ Properties that are not provided will be modified as empty value.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p><strong>menu</strong><br>
-<em>optional</em></p>
+<em>required</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Content of a new menu.</p>
+<p>Menu information of a menu to be created.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p><a href="#_menurequestpayload">MenuRequestPayload</a></p>
@@ -1306,7 +1304,7 @@ Properties that are not provided will be modified as empty value.</p>
 <p>OK</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>object</p>
+<p><a href="#_responseentity">ResponseEntity</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -1381,24 +1379,17 @@ Properties that are not provided will be modified as empty value.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>menu-controller</p>
+<p>Endpoints for Managing Menu</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_searchmenususingget"><a class="anchor" href="#_searchmenususingget"></a>Search available menus.</h3>
+<h3 id="_searchmenususingget"><a class="anchor" href="#_searchmenususingget"></a>Returns List of Available Menus Matching Against Optional Keyword</h3>
 <div class="literalblock">
 <div class="content">
-<pre>GET /api/menu/</pre>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_description_4"><a class="anchor" href="#_description_4"></a>Description</h4>
-<div class="paragraph">
-<p>Provided keyword will match against menu name.<br>
-Otherwise return all available menus.</p>
+<pre>GET /api/menu</pre>
 </div>
 </div>
 <div class="sect3">
@@ -1515,14 +1506,14 @@ Otherwise return all available menus.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>menu-controller</p>
+<p>Endpoints for Managing Menu</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_findmenubyidusingget"><a class="anchor" href="#_findmenubyidusingget"></a>Find menu by id.</h3>
+<h3 id="_findmenubyidusingget"><a class="anchor" href="#_findmenubyidusingget"></a>Returns a Specific Menu by Their Id</h3>
 <div class="literalblock">
 <div class="content">
 <pre>GET /api/menu/{id}</pre>
@@ -1555,7 +1546,7 @@ Otherwise return all available menus.</p>
 <em>required</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Menu&#8217;s id to be found.</p>
+<p>Id of the menu to be obtained.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>integer (int64)</p>
@@ -1642,24 +1633,23 @@ Otherwise return all available menus.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>menu-controller</p>
+<p>Endpoints for Managing Menu</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_modifymenuusingput"><a class="anchor" href="#_modifymenuusingput"></a>Modify an existing menu.</h3>
+<h3 id="_modifymenuusingput"><a class="anchor" href="#_modifymenuusingput"></a>Modifies an Existing Menu</h3>
 <div class="literalblock">
 <div class="content">
 <pre>PUT /api/menu/{id}</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_5"><a class="anchor" href="#_description_5"></a>Description</h4>
+<h4 id="_description_2"><a class="anchor" href="#_description_2"></a>Description</h4>
 <div class="paragraph">
-<p>Must provide id of an existing menu.<br>
-Properties that are not provided will be modified as empty value.</p>
+<p>Properties that are not provided will be modified as empty value.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1689,7 +1679,7 @@ Properties that are not provided will be modified as empty value.</p>
 <em>required</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Menu&#8217;s id to be modify.</p>
+<p>Id of the menu to be modified.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>integer (int64)</p>
@@ -1701,7 +1691,7 @@ Properties that are not provided will be modified as empty value.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p><strong>menu</strong><br>
-<em>optional</em></p>
+<em>required</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>Menu to be modified with complete content.</p>
@@ -1737,7 +1727,7 @@ Properties that are not provided will be modified as empty value.</p>
 <p>OK</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>object</p>
+<p><a href="#_responseentity">ResponseEntity</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -1812,7 +1802,7 @@ Properties that are not provided will be modified as empty value.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>menu-controller</p>
+<p>Endpoints for Managing Menu</p>
 </li>
 </ul>
 </div>
@@ -1852,7 +1842,7 @@ Properties that are not provided will be modified as empty value.</p>
 <em>required</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Menu&#8217;s id to be disabled.</p>
+<p>Id of the menu to be disabled.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>integer (int64)</p>
@@ -1885,7 +1875,7 @@ Properties that are not provided will be modified as empty value.</p>
 <p>OK</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>object</p>
+<p><a href="#_responseentity">ResponseEntity</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -1939,17 +1929,17 @@ Properties that are not provided will be modified as empty value.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>menu-controller</p>
+<p>Endpoints for Managing Menu</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_placeorderusingpost"><a class="anchor" href="#_placeorderusingpost"></a>Place an order.</h3>
+<h3 id="_placeorderusingpost"><a class="anchor" href="#_placeorderusingpost"></a>Places an Order</h3>
 <div class="literalblock">
 <div class="content">
-<pre>POST /api/order/</pre>
+<pre>POST /api/order</pre>
 </div>
 </div>
 <div class="sect3">
@@ -1975,8 +1965,8 @@ Properties that are not provided will be modified as empty value.</p>
 <p><strong>Body</strong></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p><strong>order</strong><br>
-<em>optional</em></p>
+<p><strong>items</strong><br>
+<em>required</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>List of items to be ordered.</p>
@@ -2012,7 +2002,7 @@ Properties that are not provided will be modified as empty value.</p>
 <p>OK</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>object</p>
+<p><a href="#_responseentity">ResponseEntity</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -2087,14 +2077,14 @@ Properties that are not provided will be modified as empty value.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>order-controller</p>
+<p>Endpoints for Managing Order</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_findorderbyidusingget"><a class="anchor" href="#_findorderbyidusingget"></a>Find order by id.</h3>
+<h3 id="_findorderbyidusingget"><a class="anchor" href="#_findorderbyidusingget"></a>Returns a Specific Order by Their Id</h3>
 <div class="literalblock">
 <div class="content">
 <pre>GET /api/order/{id}</pre>
@@ -2127,7 +2117,7 @@ Properties that are not provided will be modified as empty value.</p>
 <em>required</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Order&#8217;s id to be found.</p>
+<p>Id of the order to be obtained.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>integer (int64)</p>
@@ -2214,14 +2204,14 @@ Properties that are not provided will be modified as empty value.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>order-controller</p>
+<p>Endpoints for Managing Order</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_checkusingput"><a class="anchor" href="#_checkusingput"></a>Check the bill.</h3>
+<h3 id="_checkusingput"><a class="anchor" href="#_checkusingput"></a>Checks a Specific Bill by Their Order Id</h3>
 <div class="literalblock">
 <div class="content">
 <pre>PUT /api/order/{id}</pre>
@@ -2254,7 +2244,7 @@ Properties that are not provided will be modified as empty value.</p>
 <em>required</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Order&#8217;s id to be checked.</p>
+<p>Id of the order to be checked.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>integer (int64)</p>
@@ -2287,7 +2277,7 @@ Properties that are not provided will be modified as empty value.</p>
 <p>OK</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>object</p>
+<p><a href="#_responseentity">ResponseEntity</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -2362,14 +2352,14 @@ Properties that are not provided will be modified as empty value.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>order-controller</p>
+<p>Endpoints for Managing Order</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_orderanotheritemusingpost"><a class="anchor" href="#_orderanotheritemusingpost"></a>Add another item to the order.</h3>
+<h3 id="_orderanotheritemusingpost"><a class="anchor" href="#_orderanotheritemusingpost"></a>Adds Another Item to a Specific Order</h3>
 <div class="literalblock">
 <div class="content">
 <pre>POST /api/order/{orderId}/detail</pre>
@@ -2402,7 +2392,7 @@ Properties that are not provided will be modified as empty value.</p>
 <em>required</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Order&#8217;s id to be added another item.</p>
+<p>Id of the order to be added another item.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>integer (int64)</p>
@@ -2414,10 +2404,10 @@ Properties that are not provided will be modified as empty value.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p><strong>detail</strong><br>
-<em>optional</em></p>
+<em>required</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Item to be added.</p>
+<p>Item and quantity to be added.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p><a href="#_orderdetailrequestpayload">OrderDetailRequestPayload</a></p>
@@ -2450,7 +2440,7 @@ Properties that are not provided will be modified as empty value.</p>
 <p>OK</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>object</p>
+<p><a href="#_responseentity">ResponseEntity</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -2525,14 +2515,14 @@ Properties that are not provided will be modified as empty value.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>order-controller</p>
+<p>Endpoints for Managing Order</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_cancelanitemusingdelete"><a class="anchor" href="#_cancelanitemusingdelete"></a>Cancel an item in the order.</h3>
+<h3 id="_cancelandetailusingdelete"><a class="anchor" href="#_cancelandetailusingdelete"></a>Cancels an Item in a Specific Order</h3>
 <div class="literalblock">
 <div class="content">
 <pre>DELETE /api/order/{orderId}/detail/{detailId}</pre>
@@ -2565,7 +2555,7 @@ Properties that are not provided will be modified as empty value.</p>
 <em>required</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Order details&#8217;s id to be canceled.</p>
+<p>Id of the order detail to be canceled.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>integer (int64)</p>
@@ -2580,7 +2570,7 @@ Properties that are not provided will be modified as empty value.</p>
 <em>required</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Order&#8217;s id, which contains the item to be canceled.</p>
+<p>Id of the order, which contains the detail to be canceled.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>integer (int64)</p>
@@ -2613,7 +2603,7 @@ Properties that are not provided will be modified as empty value.</p>
 <p>OK</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>object</p>
+<p><a href="#_responseentity">ResponseEntity</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -2667,7 +2657,7 @@ Properties that are not provided will be modified as empty value.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>order-controller</p>
+<p>Endpoints for Managing Order</p>
 </li>
 </ul>
 </div>
@@ -2680,6 +2670,9 @@ Properties that are not provided will be modified as empty value.</p>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_itemrequestpayload"><a class="anchor" href="#_itemrequestpayload"></a>ItemRequestPayload</h3>
+<div class="paragraph">
+<p>Class representing an item in request.</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -2700,7 +2693,8 @@ Properties that are not provided will be modified as empty value.</p>
 <em>optional</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Item description</p>
+<p>Item description<br>
+<strong>Example</strong> : <code>"A typical Neapolitan pizza, made with San Marzano tomatoes, mozzarella cheese, fresh basil, salt and extra-virgin olive oil."</code></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>string</p>
@@ -2712,7 +2706,8 @@ Properties that are not provided will be modified as empty value.</p>
 <em>optional</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Item image location</p>
+<p>Item image location<br>
+<strong>Example</strong> : <code>"https://i.pinimg.com/originals/fd/34/b0/fd34b03d5d936a024248d0eef5eeee1b.jpg"</code></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>string</p>
@@ -2724,7 +2719,8 @@ Properties that are not provided will be modified as empty value.</p>
 <em>optional</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Item name</p>
+<p>Item name<br>
+<strong>Example</strong> : <code>"Pizza Margherita"</code></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>string</p>
@@ -2736,7 +2732,8 @@ Properties that are not provided will be modified as empty value.</p>
 <em>optional</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Item price per unit</p>
+<p>Item price per unit<br>
+<strong>Example</strong> : <code>400.0</code></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>number</p>
@@ -2748,7 +2745,8 @@ Properties that are not provided will be modified as empty value.</p>
 <em>optional</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Item&#8217;s type ids</p>
+<p>Identifiers of item types<br>
+<strong>Example</strong> : <code>[ 1 ]</code></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>&lt; integer (int64) &gt; array</p>
@@ -2759,6 +2757,9 @@ Properties that are not provided will be modified as empty value.</p>
 </div>
 <div class="sect2">
 <h3 id="_itemresponsepayload"><a class="anchor" href="#_itemresponsepayload"></a>ItemResponsePayload</h3>
+<div class="paragraph">
+<p>Class representing an item in response.</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -2791,7 +2792,7 @@ Properties that are not provided will be modified as empty value.</p>
 <em>optional</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Item id</p>
+<p>Identifier of the item</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>integer (int64)</p>
@@ -2839,7 +2840,7 @@ Properties that are not provided will be modified as empty value.</p>
 <em>optional</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Item&#8217;s additional details</p>
+<p>Item types (additional details)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>&lt; <a href="#_typepayload">TypePayload</a> &gt; array</p>
@@ -2850,6 +2851,9 @@ Properties that are not provided will be modified as empty value.</p>
 </div>
 <div class="sect2">
 <h3 id="_menurequestpayload"><a class="anchor" href="#_menurequestpayload"></a>MenuRequestPayload</h3>
+<div class="paragraph">
+<p>Class representing a menu in request.</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -2870,7 +2874,8 @@ Properties that are not provided will be modified as empty value.</p>
 <em>optional</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Menu&#8217;s availability</p>
+<p>Availability of the menu<br>
+<strong>Example</strong> : <code>true</code></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>boolean</p>
@@ -2882,7 +2887,8 @@ Properties that are not provided will be modified as empty value.</p>
 <em>optional</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Menu items</p>
+<p>Menu items<br>
+<strong>Example</strong> : <code>[ 1, 3, 5 ]</code></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>&lt; integer (int64) &gt; array</p>
@@ -2894,7 +2900,8 @@ Properties that are not provided will be modified as empty value.</p>
 <em>optional</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Menu name</p>
+<p>Menu name<br>
+<strong>Example</strong> : <code>"Today&#8217;s special"</code></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>string</p>
@@ -2905,6 +2912,9 @@ Properties that are not provided will be modified as empty value.</p>
 </div>
 <div class="sect2">
 <h3 id="_menuresponsepayload"><a class="anchor" href="#_menuresponsepayload"></a>MenuResponsePayload</h3>
+<div class="paragraph">
+<p>Class representing a menu in response.</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -2925,7 +2935,7 @@ Properties that are not provided will be modified as empty value.</p>
 <em>optional</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Menu id</p>
+<p>Identifier of the menu</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>integer (int64)</p>
@@ -2937,7 +2947,7 @@ Properties that are not provided will be modified as empty value.</p>
 <em>optional</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Menu items</p>
+<p>Items in the menu</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>&lt; <a href="#_itemresponsepayload">ItemResponsePayload</a> &gt; array</p>
@@ -2960,6 +2970,9 @@ Properties that are not provided will be modified as empty value.</p>
 </div>
 <div class="sect2">
 <h3 id="_orderdetailrequestpayload"><a class="anchor" href="#_orderdetailrequestpayload"></a>OrderDetailRequestPayload</h3>
+<div class="paragraph">
+<p>Class representing an item ordered in a request.</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -2980,7 +2993,8 @@ Properties that are not provided will be modified as empty value.</p>
 <em>optional</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Ordered item id</p>
+<p>Identifier of the ordered item<br>
+<strong>Example</strong> : <code>1</code></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>integer (int64)</p>
@@ -2992,7 +3006,8 @@ Properties that are not provided will be modified as empty value.</p>
 <em>optional</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Ordered quantity</p>
+<p>Quantity ordered<br>
+<strong>Example</strong> : <code>2</code></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>integer (int32)</p>
@@ -3003,6 +3018,9 @@ Properties that are not provided will be modified as empty value.</p>
 </div>
 <div class="sect2">
 <h3 id="_orderdetailresponsepayload"><a class="anchor" href="#_orderdetailresponsepayload"></a>OrderDetailResponsePayload</h3>
+<div class="paragraph">
+<p>Class representing an order detail in a response.</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -3023,7 +3041,7 @@ Properties that are not provided will be modified as empty value.</p>
 <em>optional</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Order detail id</p>
+<p>Identifier of the order detail</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>integer (int64)</p>
@@ -3035,7 +3053,7 @@ Properties that are not provided will be modified as empty value.</p>
 <em>optional</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Ordered item</p>
+<p>Item ordered</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p><a href="#_itemresponsepayload">ItemResponsePayload</a></p>
@@ -3047,7 +3065,7 @@ Properties that are not provided will be modified as empty value.</p>
 <em>optional</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Ordered quantity</p>
+<p>Quantity ordered</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>integer (int32)</p>
@@ -3058,6 +3076,9 @@ Properties that are not provided will be modified as empty value.</p>
 </div>
 <div class="sect2">
 <h3 id="_orderresponsepayload"><a class="anchor" href="#_orderresponsepayload"></a>OrderResponsePayload</h3>
+<div class="paragraph">
+<p>Class representing an order in a response.</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -3090,7 +3111,7 @@ Properties that are not provided will be modified as empty value.</p>
 <em>optional</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>Order id</p>
+<p>Identifier of the order</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>integer (int64)</p>
@@ -3113,6 +3134,9 @@ Properties that are not provided will be modified as empty value.</p>
 </div>
 <div class="sect2">
 <h3 id="_689c17ef93ec055be25e6b97970dd536"><a class="anchor" href="#_689c17ef93ec055be25e6b97970dd536"></a>PageablePayload«ItemResponsePayload»</h3>
+<div class="paragraph">
+<p>Class representing a page of results.</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -3133,7 +3157,7 @@ Properties that are not provided will be modified as empty value.</p>
 <em>optional</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>One slice of data.</p>
+<p>One page of data.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>&lt; <a href="#_itemresponsepayload">ItemResponsePayload</a> &gt; array</p>
@@ -3167,7 +3191,54 @@ Properties that are not provided will be modified as empty value.</p>
 </table>
 </div>
 <div class="sect2">
+<h3 id="_responseentity"><a class="anchor" href="#_responseentity"></a>ResponseEntity</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 42.8571%;">
+<col style="width: 57.1429%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">Name</th>
+<th class="tableblock halign-left valign-middle">Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p><strong>body</strong><br>
+<em>optional</em></p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>object</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p><strong>statusCode</strong><br>
+<em>optional</em></p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>enum (100 CONTINUE, 101 SWITCHING_PROTOCOLS, 102 PROCESSING, 103 CHECKPOINT, 200 OK, 201 CREATED, 202 ACCEPTED, 203 NON_AUTHORITATIVE_INFORMATION, 204 NO_CONTENT, 205 RESET_CONTENT, 206 PARTIAL_CONTENT, 207 MULTI_STATUS, 208 ALREADY_REPORTED, 226 IM_USED, 300 MULTIPLE_CHOICES, 301 MOVED_PERMANENTLY, 302 FOUND, 302 MOVED_TEMPORARILY, 303 SEE_OTHER, 304 NOT_MODIFIED, 305 USE_PROXY, 307 TEMPORARY_REDIRECT, 308 PERMANENT_REDIRECT, 400 BAD_REQUEST, 401 UNAUTHORIZED, 402 PAYMENT_REQUIRED, 403 FORBIDDEN, 404 NOT_FOUND, 405 METHOD_NOT_ALLOWED, 406 NOT_ACCEPTABLE, 407 PROXY_AUTHENTICATION_REQUIRED, 408 REQUEST_TIMEOUT, 409 CONFLICT, 410 GONE, 411 LENGTH_REQUIRED, 412 PRECONDITION_FAILED, 413 PAYLOAD_TOO_LARGE, 413 REQUEST_ENTITY_TOO_LARGE, 414 URI_TOO_LONG, 414 REQUEST_URI_TOO_LONG, 415 UNSUPPORTED_MEDIA_TYPE, 416 REQUESTED_RANGE_NOT_SATISFIABLE, 417 EXPECTATION_FAILED, 418 I_AM_A_TEAPOT, 419 INSUFFICIENT_SPACE_ON_RESOURCE, 420 METHOD_FAILURE, 421 DESTINATION_LOCKED, 422 UNPROCESSABLE_ENTITY, 423 LOCKED, 424 FAILED_DEPENDENCY, 426 UPGRADE_REQUIRED, 428 PRECONDITION_REQUIRED, 429 TOO_MANY_REQUESTS, 431 REQUEST_HEADER_FIELDS_TOO_LARGE, 451 UNAVAILABLE_FOR_LEGAL_REASONS, 500 INTERNAL_SERVER_ERROR, 501 NOT_IMPLEMENTED, 502 BAD_GATEWAY, 503 SERVICE_UNAVAILABLE, 504 GATEWAY_TIMEOUT, 505 HTTP_VERSION_NOT_SUPPORTED, 506 VARIANT_ALSO_NEGOTIATES, 507 INSUFFICIENT_STORAGE, 508 LOOP_DETECTED, 509 BANDWIDTH_LIMIT_EXCEEDED, 510 NOT_EXTENDED, 511 NETWORK_AUTHENTICATION_REQUIRED)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p><strong>statusCodeValue</strong><br>
+<em>optional</em></p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
+<p>integer (int32)</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
 <h3 id="_typepayload"><a class="anchor" href="#_typepayload"></a>TypePayload</h3>
+<div class="paragraph">
+<p>Class representing a type(additional detail) of items.</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -3188,7 +3259,8 @@ Properties that are not provided will be modified as empty value.</p>
 <em>optional</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>item type id</p>
+<p>Unique identifier of the item type(additional detail).<br>
+<strong>Example</strong> : <code>1</code></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>integer (int64)</p>
@@ -3200,7 +3272,8 @@ Properties that are not provided will be modified as empty value.</p>
 <em>optional</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
-<p>item type name</p>
+<p>Name of the item type(additional detail).<br>
+<strong>Example</strong> : <code>"Italian"</code></p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="paragraph">
 <p>string</p>
@@ -3214,7 +3287,7 @@ Properties that are not provided will be modified as empty value.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-07-25 00:14:10 +0800
+Last updated 2019-07-25 15:23:09 +0800
 </div>
 </div>
 </body>
