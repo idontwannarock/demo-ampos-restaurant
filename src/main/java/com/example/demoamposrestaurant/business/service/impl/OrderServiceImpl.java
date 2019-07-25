@@ -90,15 +90,14 @@ public class OrderServiceImpl implements OrderService {
         BillOrder order = orderRepository.findById(orderId)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No such order."));
         Set<OrderDetail> details = order.getDetails();
-        if (details.stream().noneMatch(d -> Objects.equals(d.getId(), orderDetailId))) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No such item in order.");
-        } else {
-            detailRepository.delete(details.stream().filter(d -> Objects.equals(d.getId(), orderDetailId)).findFirst().get());
-            detailRepository.flush();
-            if (details.stream().noneMatch(d -> d.getCheckedTime() == null)) {
-                order.setIsChecked(true);
-                orderRepository.save(order);
-            }
+        detailRepository.delete(details.stream()
+                .filter(d -> Objects.equals(d.getId(), orderDetailId))
+                .findFirst()
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No such item in order.")));
+        detailRepository.flush();
+        if (details.stream().noneMatch(d -> d.getCheckedTime() == null)) {
+            order.setIsChecked(true);
+            orderRepository.save(order);
         }
     }
 }

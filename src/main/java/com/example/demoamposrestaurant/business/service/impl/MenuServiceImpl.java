@@ -38,7 +38,7 @@ public class MenuServiceImpl implements MenuService {
         Optional.ofNullable(payload.getIsAvailable()).ifPresent(menu::setIsAvailable);
 
         Set<Long> itemIds = payload.getItemIds();
-        if (itemIds != null && itemIds.size() > 0) {
+        if (itemIds != null && !itemIds.isEmpty()) {
             menu.setItems(new HashSet<>(itemRepository.findAllById(itemIds)));
         }
 
@@ -71,7 +71,7 @@ public class MenuServiceImpl implements MenuService {
         menu.setName(payload.getName());
         menu.setIsAvailable(payload.getIsAvailable());
         Set<Long> itemIds = payload.getItemIds();
-        if (itemIds != null && itemIds.size() > 0) {
+        if (itemIds != null && !itemIds.isEmpty()) {
             menu.setItems(new HashSet<>(itemRepository.findAllById(itemIds)));
         }
         menuRepository.save(menu);

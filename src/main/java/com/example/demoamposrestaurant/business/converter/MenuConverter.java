@@ -1,7 +1,6 @@
 package com.example.demoamposrestaurant.business.converter;
 
 import com.example.demoamposrestaurant.persistent.domain.Menu;
-import com.example.demoamposrestaurant.presentation.payload.MenuRequestPayload;
 import com.example.demoamposrestaurant.presentation.payload.MenuResponsePayload;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

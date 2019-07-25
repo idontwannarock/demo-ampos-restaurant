@@ -26,7 +26,7 @@ public class OrderController {
     @PostMapping(value = "/",
             consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public ResponseEntity<?> placeOrder(
+    public ResponseEntity placeOrder(
             @ApiParam("List of items to be ordered.")
             @RequestBody List<OrderDetailRequestPayload> order) {
         return ResponseEntity.created(URI.create("api/order/" + orderService.placeOrder(order))).build();
@@ -44,7 +44,7 @@ public class OrderController {
     @ApiOperation(value = "Check the bill.")
     @PutMapping(value = "/{id}",
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public ResponseEntity<?> check(
+    public ResponseEntity check(
             @ApiParam(value = "Order's id to be checked.", required = true)
             @PathVariable("id") Long id) {
         orderService.checkTheBill(id);
@@ -55,7 +55,7 @@ public class OrderController {
     @PostMapping(value = "/{orderId}/detail",
             consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public ResponseEntity<?> orderAnotherItem(
+    public ResponseEntity orderAnotherItem(
             @ApiParam(value = "Order's id to be added another item.", required = true)
             @PathVariable("orderId") Long orderId,
             @ApiParam("Item to be added.")
@@ -67,7 +67,7 @@ public class OrderController {
     @ApiOperation(value = "Cancel an item in the order.")
     @DeleteMapping(value = "/{orderId}/detail/{detailId}",
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public ResponseEntity<?> cancelAnItem(
+    public ResponseEntity cancelAnItem(
             @ApiParam(value = "Order's id, which contains the item to be canceled.", required = true)
             @PathVariable("orderId") Long orderId,
             @ApiParam(value = "Order details's id to be canceled.", required = true)

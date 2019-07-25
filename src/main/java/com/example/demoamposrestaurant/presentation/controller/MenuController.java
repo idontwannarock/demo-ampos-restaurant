@@ -26,7 +26,7 @@ public class MenuController {
     @PostMapping(value = "/",
             consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public ResponseEntity<?> createMenu(
+    public ResponseEntity createMenu(
             @ApiParam("Content of a new menu.")
             @RequestBody MenuRequestPayload menu) {
         return ResponseEntity.created(URI.create("api/menu/" + menuService.createNewMenu(menu))).build();
@@ -56,7 +56,7 @@ public class MenuController {
     @PutMapping(value = "/{id}",
             consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public ResponseEntity<?> modifyMenu(
+    public ResponseEntity modifyMenu(
             @ApiParam(value = "Menu's id to be modify.", required = true)
             @PathVariable("id") Long id,
             @ApiParam("Menu to be modified with complete content.")
@@ -68,7 +68,7 @@ public class MenuController {
     @ApiOperation(value = "Disable a menu.")
     @DeleteMapping(value = "/{id}",
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public ResponseEntity<?> disableMenu(
+    public ResponseEntity disableMenu(
             @ApiParam(value = "Menu's id to be disabled.", required = true)
             @PathVariable("id") Long id) {
         menuService.disableMenu(id);

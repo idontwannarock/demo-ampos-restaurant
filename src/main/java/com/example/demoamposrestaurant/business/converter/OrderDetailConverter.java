@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 @Component
 public class OrderDetailConverter {
@@ -21,9 +22,7 @@ public class OrderDetailConverter {
     public OrderDetail toEntity(OrderDetailRequestPayload payload, BillOrder order, List<Item> items, Date orderedTime) {
         OrderDetail detail = new OrderDetail();
         detail.setBillOrder(order);
-        if (items.stream().anyMatch(i -> Objects.equals(i.getId(), payload.getItemId()))) {
-            detail.setItem(items.stream().filter(i -> Objects.equals(i.getId(), payload.getItemId())).findFirst().get());
-        }
+        items.stream().filter(i -> Objects.equals(i.getId(), payload.getItemId())).findFirst().ifPresent(detail::setItem);
         detail.setQuantity(payload.getQuantity());
         detail.setOrderedTime(orderedTime);
         return detail;

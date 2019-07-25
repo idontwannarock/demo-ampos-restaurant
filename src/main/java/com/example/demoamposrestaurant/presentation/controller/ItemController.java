@@ -39,7 +39,7 @@ public class ItemController {
     @PostMapping(value = "/",
             consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public ResponseEntity<?> createItem(
+    public ResponseEntity createItem(
             @ApiParam("Content of a new item.")
             @RequestBody ItemRequestPayload item) {
         long itemId = itemService.createNewItem(item);
@@ -74,7 +74,7 @@ public class ItemController {
     @PutMapping(value = "/{id}",
             consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public ResponseEntity<?> modifyItem(
+    public ResponseEntity modifyItem(
             @ApiParam(value = "Item's id to be modify.", required = true)
             @PathVariable("id") Long id,
             @ApiParam("Item to be modified with complete content.")

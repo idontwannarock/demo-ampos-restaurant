@@ -36,7 +36,7 @@ public class ItemServiceImpl implements ItemService {
         Item item = itemConverter.toEntity(payload);
 
         Set<Long> typeIds = payload.getTypeIds();
-        if (typeIds != null && typeIds.size() > 0) {
+        if (typeIds != null && !typeIds.isEmpty()) {
             item.setTypes(new HashSet<>(typeRepository.findAllById(typeIds)));
         }
 
@@ -79,7 +79,7 @@ public class ItemServiceImpl implements ItemService {
         item.setPrice(payload.getPrice());
 
         Set<Long> typeIds = payload.getTypeIds();
-        if (typeIds != null && typeIds.size() > 0) {
+        if (typeIds != null && !typeIds.isEmpty()) {
             item.setTypes(new HashSet<>(typeRepository.findAllById(typeIds)));
         }
         itemRepository.save(item);

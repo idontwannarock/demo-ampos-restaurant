@@ -5,7 +5,7 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 import java.util.List;
 
-public class PageablePayload<T> implements Serializable {
+public class PageablePayload<T extends Serializable> implements Serializable {
 
     private static final long serialVersionUID = -8445059638943426824L;
     @ApiModelProperty(value = "Total pages.")
