@@ -30,9 +30,9 @@ For the documentation of APIs, please refer to below link.
 
 If you would like to test APIs, please first run the bash scripts in [Quick Start](#quick-start).
 
-And for different Docker, Docker Desktop and Docker Toolbox, there are two different URLs to access the live tester and documentation:
+And for different Docker tools, be it Docker Desktop or Docker Toolbox, there are two different URLs to access the live tester and documentation:
 
-- [Docker Desktop's Live Tester and Documentation](http://localhost:9000/swagger-ui.html)
+- [Docker Desktop's Live Tester and Documentation](http://127.0.0.1:9000/swagger-ui.html)
 - [Docker Toolbox's Live Tester and Documentation](http://192.168.99.100:9000/swagger-ui.html)
 
 [//]: # (mvn clean test -Pdocument -Dfile.encoding=UTF-8)
