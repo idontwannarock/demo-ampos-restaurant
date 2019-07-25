@@ -1,25 +1,27 @@
 package com.example.demoamposrestaurant.presentation.payload;
 
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Set;
 
+@ApiModel(description = "Class representing an item in response.")
 public class ItemResponsePayload implements Serializable {
 
     private static final long serialVersionUID = 1580270042701659021L;
-    @ApiModelProperty(value = "Item id")
+    @ApiModelProperty(value = "Identifier of the item", position = 0)
     private Long id;
-    @ApiModelProperty(value = "Item name")
+    @ApiModelProperty(value = "Item name", position = 1)
     private String name;
-    @ApiModelProperty(value = "Item description")
+    @ApiModelProperty(value = "Item description", position = 2)
     private String description;
-    @ApiModelProperty(value = "Item image location")
+    @ApiModelProperty(value = "Item image location", position = 3)
     private String imageLocation;
-    @ApiModelProperty(value = "Item price per unit")
+    @ApiModelProperty(value = "Item price per unit", position = 4)
     private BigDecimal price;
-    @ApiModelProperty(value = "Item's additional details")
+    @ApiModelProperty(value = "Item types (additional details)", position = 5)
     private Set<TypePayload> types;
 
     public Long getId() {

@@ -15,5 +15,5 @@ public interface OrderService {
 
     long orderAdditionalItem(Long orderId, Long itemId, Integer quantity);
 
-    void cancelOneItemInOrder(Long orderId, Long orderDetailId);
+    void cancelAnDetailInOrder(Long orderId, Long orderDetailId);
 }

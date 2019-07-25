@@ -86,7 +86,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public void cancelOneItemInOrder(Long orderId, Long orderDetailId) {
+    public void cancelAnDetailInOrder(Long orderId, Long orderDetailId) {
         BillOrder order = orderRepository.findById(orderId)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No such order."));
         Set<OrderDetail> details = order.getDetails();

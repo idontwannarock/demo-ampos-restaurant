@@ -33,7 +33,7 @@ public class Swagger2MarkupTest {
     @Test
     public void convert() throws Exception {
         MvcResult result = mockMvc
-                .perform(get("/v2/api-docs?group=employee-api"))
+                .perform(get("/v2/api-docs?group=staff-order-api"))
                 .andExpect(status().isOk())
                 .andReturn();
 
