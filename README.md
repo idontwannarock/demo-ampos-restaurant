@@ -5,18 +5,13 @@ This is a back-end demo app for the AMPOS restaurant project, providing order re
 
 # Required Environment
 
-- JDK 1.8+
-- Maven 3.5.2+
 - Docker Desktop or Docker Toolbox installed with Docker Engine 1.13.0+ 
-- (Optional) Git
 
 # Quick Start
 
 Run below bash scripts in project directory.
 
 ```bash
-mvn clean package -DskipTests -Pdocker
-
 docker-compose up
 ```
 

@@ -30,6 +30,6 @@ services:
     depends_on:
       - docker-mysql
     ports:
-      - 9000:9000
+      - 9100:9100
     volumes:
       - /data/spring-boot-app
